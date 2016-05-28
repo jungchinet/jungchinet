@@ -1,0 +1,40 @@
+/* BOX - http://html.nhndesign.com/uio_factory/ui_pattern/box/1 */
+.section{position:relative;border:1px solid #e9e9e9;background:#fff;font-size:12px;line-height:normal;*zoom:1}
+.section .hx{margin:0;padding:10px 0 7px 9px;border:1px solid #fff;background:#f7f7f7 url(img/br_section_title.gif) repeat-x left bottom;font-size:12px;line-height:normal;color:#333}
+.section .tx{padding:10px;border-top:1px solid #e9e9e9;color:#666}
+.section .section_more{position:absolute;top:9px;right:10px;font:11px Dotum, 돋움, Tahoma;color:#656565;text-decoration:none !important}
+.section .section_more span{font:14px/1 Tahoma;color:#6e89aa}
+
+/* http://html.nhndesign.com/uio_factory/ui_pattern/list/3 */
+.section_ol{position:relative;border:1px solid #ddd;background:#fff;font-size:12px;font-family:Tahoma, Geneva, sans-serif;line-height:normal;*zoom:1}
+.section_ol a{color:#666;text-decoration:none}
+.section_ol a:hover,
+.section_ol a:active,
+.section_ol a:focus{text-decoration:underline}
+.section_ol em{font-style:normal}
+.section_ol h2{margin:0;padding:10px 0 8px 13px;border-bottom:1px solid #ddd;font-size:12px;color:#333}
+.section_ol h2 em{color:#cf3292}
+.section_ol ol{margin:13px;padding:0;list-style:none}
+.section_ol li{position:relative;margin:0 0 10px 0;*zoom:1}
+.section_ol li:after{display:block;clear:both;content:""}
+.section_ol li .ranking{display:inline-block;width:14px;height:11px;margin:0 5px 0 0;border-top:1px solid #fff;border-bottom:1px solid #d1d1d1;background:#d1d1d1;text-align:center;vertical-align:top;font:bold 10px Tahoma;color:#fff}
+.section_ol li.best .ranking{border-bottom:1px solid #6e87a5;background:#6e87a5}
+.section_ol li.best a{color:#7189a7}
+.section_ol li .num{position:absolute;top:0;right:0;font-size:11px;color:#a8a8a8;white-space:nowrap}
+.section_ol li.best .num{font-weight:bold;color:#7189a7}
+.section_ol .more{position:absolute;top:10px;right:13px;font:11px Dotum, 돋움;text-decoration:none !important}
+.section_ol .more span{margin:0 2px 0 0;font-weight:bold;font-size:16px;color:#d76ea9;vertical-align:middle}
+
+/* 정보그래프 - http://html.nhndesign.com/uio_factory/ui_pattern/etc/3 */
+.i_graph{position:relative;line-height:normal;white-space:nowrap}
+.i_graph .g_bar{display:inline-block;position:relative;width:100%;height:14px;margin:0 5px 0 0;border:1px solid #ccc;background:#e9e9e9;font-size:11px}
+.i_graph .g_action{display:inline-block;position:relative;height:14px;margin:-1px;border:1px solid #8c9bac;background:#99a6b6}
+.i_graph .g_percent{font:16px Arial, Helvetica, sans-serif;color:#ccc}
+.i_graph .g_percent strong{font-size:18px;color:#e88b30}
+
+/* 보더형테이블 4 - http://html.nhndesign.com/uio_factory/ui_pattern/table/4 */
+.tbl_type,.tbl_type th,.tbl_type td{border:0}
+.tbl_type{width:100%;border-bottom:1px solid #dddee2;font-family:'돋움',dotum;font-size:12px;table-layout:fixed}
+.tbl_type caption{display:none}
+.tbl_type th{padding:8px 0 5px 20px;border-top:1px solid #dddee2;background:#f1f1f3;color:#666;font-weight:bold;text-align:left;vertical-align:top}
+.tbl_type td{padding:8px 5px 5px 12px;border-top:1px solid #dddee2;line-height:16px;vertical-align:top}

@@ -1,0 +1,56 @@
+.clearfix{display:block; float:none; clear:both; height:0; width:100%; font-size:0 !important; line-height:0 !important; overflow:hidden; margin:0 !important; padding:0 !important;}
+
+#twitter_box {position:relative; margin: 0px 0px 0px 130px; width:70%; font-size:14px; color:#444444; font-family:Arial, sans-serif;  border:1px solid #ddd; border-radius: 5px;}   /* 박스 바깥쪽 여백과 박스 너비 */
+#twitter_box .redo {padding: 0px 10px 0px 15px; font-size: 12px; border-bottom:1px solid #ddd;}   /* 검색어,새로고침 왼쪽 여백 */
+#twitter_box .redo *{vertical-align: middle}
+#twitter_box .redo a{color:#444444; line-height: 36px;}
+#twitter_box .redo span.sword { color:#989898; }
+/*#twitter_box .list_wrap{ height:407px; width:100%; overflow-y:scroll;}*/
+#twitter_box .twt_list_box {padding: 5px 0px 0px 5px; border-bottom:1px solid #EFEFEF; }   /* 안쪽 위 오른쪽 아래 왼쪽 여백, 구분실선 */
+#twitter_box .twt_list_box .profile_pic	{ float:left; width:12%; }  /* 아이콘 오른쪽 여백 */
+#twitter_box .twt_list_box .profile_pic span { display:inline-block; margin:5px; }
+#twitter_box .twt_list_box .profile_pic span img{ width: 48px; height: 48px; border-radius: 5px;}
+#twitter_box .twt_list_box .text_box { float:left; width:80%; }  /* 트위터 본문 너비 */ 
+#twitter_box .twt_list_box .text_box .user .name { display:inline-block; padding:5px 10px 4px 0; }
+#twitter_box .twt_list_box .text_box .user .name a { color:#292f33; font-weight:bold;}
+#twitter_box .twt_list_box .text_box .user .name a:hover {color:rgb(0, 132, 180);}
+#twitter_box .twt_list_box .text_box .user .follower{ font-size: 13px; color: #8899a6;}
+#twitter_box .twt_list_box .text_box .user .follower img{vertical-align: text-bottom;}
+#twitter_box .twt_list_box .text_box .text { margin-bottom:10px; }
+#twitter_box .twt_list_box .text_box .text .content	{ color:#444444; line-height:130%; }
+#twitter_box .twt_list_box .text_box .text .content	.photo{padding:5px 0; max-height:253px; overflow:hidden;}
+#twitter_box .twt_list_box .text_box .text .content	.photo img{max-width:100%; height:auto; border-radius: 5px;}
+#twitter_box .twt_list_box .text_box .text .info { display:inline-block; margin: 5px 5px 0 0; font-size:12px;}
+#twitter_box .twt_list_box .text_box .text .info .src a	{ color:#B3B3B3;}
+#twitter_box .twt_list_box .text_box .text .info .date { margin-left:20px; font-family:Arial; color:#868686; }
+#twitter_box .twt_list_box .text_box .text .info .retweet { margin-left:20px; color:#929292; }
+#twitter_box .twt_list_box .text_box a { color:rgb(0, 132, 180); }
+#twitter_box .twt_list_box .text_box a:hover { text-decoration:underline; }
+#twitter_box button.load-more{
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+    color: #1b95e0;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+    cursor: pointer;
+    background-color: #fcfcfc;
+    background-color: rgba(0,0,0,0.02);
+    border: 0;
+    outline: 0;
+    box-shadow: inset 0 3px 8px rgba(0,0,0,0.05);
+    -webkit-transition: background-color .2s ease-out;
+    -moz-transition: background-color .2s ease-out;
+    -o-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out;
+}
+#twitter_box button.load-more:hover, button.load-more:focus {
+    text-decoration: underline;
+    background-color: #eee;
+    background-color: rgba(0,0,0,0.08);
+}
+#twitter_box #tweets_loading{
+	text-align:center;
+	padding:35px 0;
+}

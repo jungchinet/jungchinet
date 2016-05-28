@@ -1,0 +1,1 @@
+<a href="https://github.com/open2/gnuboard4-buldang-pack/commits/master/" target=new><img src="<?=$g4[path]?>/images/github_logo.jpg" align=absmiddle alt=""></a>

@@ -1,0 +1,66 @@
+/* http://html.nhndesign.com/uio_factory/ui_pattern/box/1 */
+.section1 {position:relative;border:1px solid #e9e9e9;background:#fff;font-size:12px;line-height:normal;*zoom:1}
+.section1 .hx{margin:0;padding:10px 0 7px 9px;border:1px solid #fff;background:#f7f7f7 url(img/br_section_title.gif) repeat-x left bottom;font-size:12px;line-height:normal;color:#333}
+.section1 .tx{padding:10px;border-top:1px solid #e9e9e9;color:#666}
+.section1 .section_more{position:absolute;top:9px;right:10px;font:11px Dotum, 돋움, Tahoma;color:#656565;text-decoration:none !important}
+.section1 .section_more span{font:14px/1 Tahoma;color:#6e89aa}
+/* http://html.nhndesign.com/uio_factory/ui_pattern/table/1 */
+.tbl_type1,.tbl_type1 th,.tbl_type1 td{border:0}
+.tbl_type1{width:100%;border-bottom:2px solid #dcdcdc;font-family:'돋움',dotum;font-size:12px;text-align:center;border-collapse:collapse}
+.tbl_type1 caption{display:none}
+.tbl_type1 tfoot{background-color:#f5f7f9;font-weight:bold}
+.tbl_type1 th{padding:7px 0 4px;border-top:2px solid #dcdcdc;border-right:1px solid #dcdcdc;border-left:1px solid #dcdcdc;background-color:#f5f7f9;color:#666;font-family:'돋움',dotum;font-size:12px;font-weight:bold}
+.tbl_type1 td{padding:6px 0 4px;border:1px solid #e5e5e5;color:#4c4c4c}
+.tbl_type1 td.ranking{font-weight:bold}
+/* http://html.nhndesign.com/uio_factory/ui_pattern/button/1 */
+.btn_pack1,
+.btn_pack1 *{display:inline-block;overflow:visible;position:relative;margin:0;padding:0;border:0;background:url(img/btn_pack.gif) no-repeat;font-size:12px;font-family:Tahoma, Sans-serif;color:#333;text-decoration:none !important;vertical-align:top;white-space:nowrap}
+.btn_pack1{margin-right:4px}
+.btn_pack1 *{left:4px;cursor:pointer;_cursor:hand}
+.btn_pack1.medium,
+.btn_pack1.medium *{height:24px;line-height:24px}
+.btn_pack1.large,
+.btn_pack1.large *{height:30px;line-height:30px}
+.btn_pack1.xlarge,
+.btn_pack1.xlarge *{height:36px;line-height:36px}
+.btn_pack1.small,
+.btn_pack1.small *{height:19px;line-height:19px}
+.btn_pack1.medium{background-position:left 0}
+.btn_pack1.large{background-position:left -30px}
+.btn_pack1.xlarge{background-position:left -65px}
+.btn_pack1.small{background-position:left -106px}
+.btn_pack1.medium *{padding:0 10px 0 6px;background-position:right top;font-size:12px}
+.btn_pack1.large *{padding:0 10px 0 6px;background-position:right -30px;font-size:16px}
+.btn_pack1.xlarge *{padding:0 10px 0 6px;background-position:right -65px;font-size:20px}
+.btn_pack1.small *{padding:0 6px 0 2px;background-position:right -106px;font-size:11px}
+.btn_pack1 *:hover,
+.btn_pack1 *:active,
+.btn_pack1 *:focus{color:#690}
+.btn_pack1.strong *{font-weight:bold !important}
+.btn_pack1.icon *{padding-left:20px}
+.btn_pack1.small.icon *{padding-left:16px}
+.btn_pack1.icon span{width:20px;margin-right:-20px;padding:0 !important}
+.btn_pack1.medium .check{background-position:4px -150px}
+.btn_pack1.large .check{background-position:4px -146px}
+.btn_pack1.xlarge .check{background-position:5px -144px}
+.btn_pack1.small .check{background-position:3px -153px}
+.btn_pack1.medium .add{background-position:-16px -150px}
+.btn_pack1.large .add{background-position:-14px -146px}
+.btn_pack1.xlarge .add{background-position:-14px -144px}
+.btn_pack1.small .add{background-position:-18px -153px}
+.btn_pack1.medium .delete{background-position:-34px -150px}
+.btn_pack1.large .delete{background-position:-34px -146px}
+.btn_pack1.xlarge .delete{background-position:-34px -144px}
+.btn_pack1.small .delete{background-position:-37px -153px}
+.btn_pack1.medium .calendar{background-position:-56px -150px}
+.btn_pack1.large .calendar{background-position:-56px -146px}
+.btn_pack1.xlarge .calendar{background-position:-56px -144px}
+.btn_pack1.small .calendar{background-position:-59px -153px}
+.btn_pack1.medium .refresh{background-position:-76px -150px}
+.btn_pack1.large .refresh{background-position:-76px -146px}
+.btn_pack1.xlarge .refresh{background-position:-76px -144px}
+.btn_pack1.small .refresh{background-position:-79px -153px}
+.btn_pack1.medium .download{background-position:-96px -151px}
+.btn_pack1.large .download{background-position:-96px -147px}
+.btn_pack1.xlarge .download{background-position:-96px -145px}
+.btn_pack1.small .download{background-position:-99px -154px}

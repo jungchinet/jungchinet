@@ -1,0 +1,157 @@
+/* UI Object */
+.section {
+    position:relative;
+    border:1px solid #e9e9e9;
+    background:#fff;
+    font-size:12px;
+    line-height:normal;
+    *zoom:1
+}
+.section .hx {
+    margin:0;
+    padding:10px 0 7px 9px;
+    border:1px solid #fff;
+    background:#f7f7f7 url(img/bg_section_title.gif) repeat-x left bottom;
+    font-size:12px;
+    line-height:normal;
+    color:#333
+}
+.section .tx {
+    padding:10px;
+    border-top:1px solid #e9e9e9;
+    color:#666
+}
+.section .section_more {
+    position:absolute;
+    top:9px;right:10px;
+    font:11px Dotum, 돋움, Tahoma;color:#656565;
+    text-decoration:none !important
+}
+.section .section_more span { 
+    font:14px/1 Tahoma;
+    color:#6e89aa
+}
+.section_ol {
+    position:relative;
+    border:1px solid #ddd;
+    background:#fff;
+    font-size:12px;
+    font-family:Tahoma, Geneva, sans-serif;
+    line-height:normal;
+    *zoom:1;
+}
+.section_ol a{color:#666;text-decoration:none}
+.section_ol a:hover,
+.section_ol a:active,
+.section_ol a:focus{text-decoration:underline}
+.section_ol em{font-style:normal}
+.section_ol h2{margin:0;padding:10px 0 8px 13px;border-bottom:1px solid #ddd;font-size:12px;color:#333}
+.section_ol h2 em{color:#cf3292}
+.section_ol ol{margin:13px;padding:0;list-style:none}
+.section_ol li{position:relative;margin:0 0 10px 0;*zoom:1}
+.section_ol li:after{display:block;clear:both;content:""}
+.section_ol li .ranking{display:inline-block;width:14px;height:11px;margin:0 5px 0 0;border-top:1px solid #fff;border-bottom:1px solid #d1d1d1;background:#d1d1d1;text-align:center;vertical-align:top;font:bold 10px Tahoma;color:#fff}
+.section_ol li.best .ranking{border-bottom:1px solid #6e87a5;background:#6e87a5}
+.section_ol li.best a{color:#7189a7}
+.section_ol li .num{position:absolute;top:0;right:0;font-size:11px;color:#a8a8a8;white-space:nowrap}
+.section_ol li.best .num{font-weight:bold;color:#7189a7}
+.section_ol .more{position:absolute;top:10px;right:13px;font:11px Dotum, 돋움;text-decoration:none !important}
+.section_ol .more span{margin:0 2px 0 0;font-weight:bold;font-size:16px;color:#d76ea9;vertical-align:middle}
+
+.section_ul{position:relative;border:1px solid #ddd;background:#fff;font-size:12px;font-family:Tahoma, Geneva, sans-serif;line-height:normal;*zoom:1}
+.section_ul a{color:#666;text-decoration:none}
+.section_ul a:hover,
+.section_ul a:active,
+.section_ul a:focus{text-decoration:underline}
+.section_ul em{font-style:normal}
+.section_ul h2{margin:0;padding:10px 0 8px 13px;border-bottom:1px solid #ddd;font-size:12px;color:#333}
+.section_ul h2 em{color:#cf3292}
+.section_ul ul{margin:13px;padding:0;list-style:none}
+.section_ul li{position:relative;margin:0 0 10px 0}
+.section_ul li:after{display:block;clear:both;content:""}
+.section_ul li .bu{float:left;margin:0 4px 0 0;color:#999}
+.section_ul li a{float:left}
+.section_ul li .time{float:right;clear:right;font-size:11px;color:#a8a8a8;white-space:nowrap}
+.section_ul .more{position:absolute;top:10px;right:13px;font:11px Dotum, 돋움;text-decoration:none !important}
+.section_ul .more span{margin:0 2px 0 0;font-size:16px;font-weight:bold;color:#d76ea9;vertical-align:middle}
+
+/* 번호없는 최신글 리스트 */
+/* http://html.nhncorp.com/uio_factory/ui_pattern/list/2 */
+.section_ul{position:relative;border:1px solid #ddd;background:#fff;font-size:12px;font-family:Tahoma, Geneva, sans-serif;line-height:normal;*zoom:1}
+.section_ul a{color:#666;text-decoration:none}
+.section_ul a:hover,
+.section_ul a:active,
+.section_ul a:focus{text-decoration:underline}
+.section_ul em{font-style:normal}
+.section_ul h2{margin:0;padding:10px 0 8px 10px;border-bottom:1px solid #ddd;font-size:12px;color:#333}
+.section_ul h2 em{color:#cf3292}
+.section_ul ul{margin:10px;padding:0;list-style:none} /* 요기 margin이랑 h2의 margin이랑 맞춰야 합니다 */
+.section_ul li{position:relative;margin:0 0 3px 0}    /*줄간격은 요기서 margin을 바꾸면 됩니다 */
+.section_ul li:after{display:block;clear:both;content:""}
+.section_ul li .bu{float:left;margin:0 3px 0 0;color:#999}
+.section_ul li a{float:left}
+.section_ul li .time{float:right;clear:right;font-size:11px;color:#a8a8a8;white-space:nowrap}
+.section_ul .more{position:absolute;top:10px;right:13px;font:11px Dotum, 돋움;text-decoration:none !important}
+.section_ul .more span{margin:0 2px 0 0;font-size:16px;font-weight:bold;color:#d76ea9;vertical-align:middle}
+
+/* 버튼 - http://html.nhncorp.com/uio_factory/ui_pattern/button/1 */
+.btn_pack,
+.btn_pack *{display:inline-block;overflow:visible;position:relative;margin:0;padding:0;border:0;background:url(img/btn_pack.gif) no-repeat;font-size:12px;font-family:Tahoma, Sans-serif;color:#333;text-decoration:none !important;vertical-align:top;white-space:nowrap}
+.btn_pack{margin-right:4px}
+.btn_pack *{left:4px;cursor:pointer;_cursor:hand}
+.btn_pack.medium,
+.btn_pack.medium *{height:24px;line-height:24px}
+.btn_pack.large,
+.btn_pack.large *{height:30px;line-height:30px}
+.btn_pack.xlarge,
+.btn_pack.xlarge *{height:36px;line-height:36px}
+.btn_pack.small,
+.btn_pack.small *{height:19px;line-height:19px}
+.btn_pack.medium{background-position:left 0}
+.btn_pack.large{background-position:left -30px}
+.btn_pack.xlarge{background-position:left -65px}
+.btn_pack.small{background-position:left -106px}
+.btn_pack.medium *{padding:0 10px 0 6px;background-position:right top;font-size:12px}
+.btn_pack.large *{padding:0 10px 0 6px;background-position:right -30px;font-size:16px}
+.btn_pack.xlarge *{padding:0 10px 0 6px;background-position:right -65px;font-size:20px}
+.btn_pack.small *{padding:0 6px 0 2px;background-position:right -106px;font-size:11px}
+.btn_pack *:hover,
+.btn_pack *:active,
+.btn_pack *:focus{color:#690}
+.btn_pack.strong *{font-weight:bold !important}
+.btn_pack.icon *{padding-left:20px}
+.btn_pack.small.icon *{padding-left:16px}
+.btn_pack.icon span{width:20px;margin-right:-20px;padding:0 !important}
+.btn_pack.medium .check{background-position:4px -150px}
+.btn_pack.large .check{background-position:4px -146px}
+.btn_pack.xlarge .check{background-position:5px -144px}
+.btn_pack.small .check{background-position:3px -153px}
+.btn_pack.medium .add{background-position:-16px -150px}
+.btn_pack.large .add{background-position:-14px -146px}
+.btn_pack.xlarge .add{background-position:-14px -144px}
+.btn_pack.small .add{background-position:-18px -153px}
+.btn_pack.medium .delete{background-position:-34px -150px}
+.btn_pack.large .delete{background-position:-34px -146px}
+.btn_pack.xlarge .delete{background-position:-34px -144px}
+.btn_pack.small .delete{background-position:-37px -153px}
+.btn_pack.medium .calendar{background-position:-56px -150px}
+.btn_pack.large .calendar{background-position:-56px -146px}
+.btn_pack.xlarge .calendar{background-position:-56px -144px}
+.btn_pack.small .calendar{background-position:-59px -153px}
+.btn_pack.medium .refresh{background-position:-76px -150px}
+.btn_pack.large .refresh{background-position:-76px -146px}
+.btn_pack.xlarge .refresh{background-position:-76px -144px}
+.btn_pack.small .refresh{background-position:-79px -153px}
+.btn_pack.medium .download{background-position:-96px -151px}
+.btn_pack.large .download{background-position:-96px -147px}
+.btn_pack.xlarge .download{background-position:-96px -145px}
+.btn_pack.small .download{background-position:-99px -154px}
+
+/* 검색 form - http://html.nhndesign.com/uio_factory/ui_pattern/form/2 */
+.srch{width:100%;padding:5px 0}
+.srch legend{overflow:hidden;visibility:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0}
+.srch{color:#c4c4c4;text-align:center}
+.srch select,.srch input{margin:-1px 0 1px;font-size:12px;color:#373737;vertical-align:middle}
+.srch .keyword{margin-left:1px;padding:2px 3px 5px;border:1px solid #b5b5b5;font-size:12px;line-height:15px}
+.srch * {vertical-align:middle;}
+.srch img (border:0}

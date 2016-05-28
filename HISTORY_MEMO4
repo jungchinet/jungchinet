@@ -1,0 +1,599 @@
+4.0.28 (2010/10/26)
+- 성능개선을 위한 index 조정
+adm/memo4.sql
+
+4.0.27 (2010/07/28)
+
+bbs/memo.php 
+bbs/memo2_form_cancel.php 
+
+
+- 쪽지 갯수오류 보정 (새로 쪽지창이 뜰때) 
+bbs/memo.php 
+
+- 안읽은쪽지 갯수를 누르면 쪽지 갯수를 update 
+bbs/memo.php 
+
+- 안읽은쪽지 목록이 안되던 오류 
+bbs/memo.php 
+
+- 쪽지 갯수 오류 (안읽은쪽지가 없는데, 안읽은 쪽지 갯수가 있는거) 
+bbs/memo2_form_cancel.php
+
+
+4.0.26 (2010/04/30)
+
+쪽지4가 매번 열릴때마다 안읽은 쪽지 갯수를 찾기 위해서 select count(*)를 합니다. 
+이것이 작은 시스템에서는 문제가 아니지만 쪽지 갯수가 몇백만개가 되면 문제되요. 
+그래서, 안읽은 쪽지를 읽을 때 갯수를 계산해서 넣게 만들었습니다. 
+
+
+사용전에 아래의 프로그램을 수행해서 db를 먼저 업그레이드 해주셔야 합니다. 
+/adm/db_memo4_unread_upgrade.php 
+
+--- 
+lib/outlogin.lib.php에서 매번 안읽은 쪽지 갯수 계산 안해도 되므로 
+아래처럼 수정을 하면 되는데, 속도 팍~ 개선 될 겁니다. 
+진즉 이걸 했어야 했는데, 너무 늦었네요. 
+
+    // 읽지 않은 쪽지가 있다면 
+    if ($member['mb_id']) { 
+        /* 원래 하는 안읽은 쪽지 갯수 계산은 더이상 안합니다. 
+        $sql = " select count(*) as cnt from {$g4['memo_table']} where me_recv_mb_id = '{$member['mb_id']}' and me_read_datetime = '0000-00-00 00:00:00' "; 
+        $row = sql_fetch($sql); 
+        $memo_not_read = $row['cnt']; 
+        */ 
+        // 쪽지4에서 계산을 하므로 
+        $memo_not_read = $member[mb_memo_unread]; 
+
+        $is_auth = false; 
+        $sql = " select count(*) as cnt from $g4[auth_table] where mb_id = '$member[mb_id]' "; 
+        $row = sql_fetch($sql); 
+        if ($row['cnt']) 
+            $is_auth = true; 
+    } 
+
+ALTER TABLE `g4_member` ADD `mb_memo_unread` INT( 11 ) NOT NULL ; 
+
+
+
+- speed up을 위한 안읽은 쪽지 갯수 db 저장 
+/adm/db_memo4_unread_upgrade.php 
+/adm/memo4.sql 
+/bbs/memo.php 
+/bbs/memo2_form_delete.php 
+/bbs/memo2_form_recover.php 
+/bbs/memo2_form_update.php
+
+
+4.0.25 (2010/02/23)
+
+  /bbs/memo.php
+  /bbs/memo2_form_update.php
+
+- 첨부파일 용량을 잘못 계산하는 오류
+  /bbs/memo2_form_update.php
+
+- 공지쪽지함 오류 
+  /bbs/memo.php
+  
+  
+4.0.24 (2010/01/05)
+
+- get_dir_size가 안되는 경우
+  /skin/member/basic/memo2_write.skin.php
+  
+- 설치프로그램 보완
+  /adm/memo4.sql
+
+4.0.23 (2009/12/08)
+
+- 속도를 올리기 위한 튜닝
+  /bbs/memo.php
+
+4.0.22 (2009/09/22)
+
+- 설치프로그램 오류 (튜닝으로 인해서 설치 오류가 발생)
+  /memo.config.php
+
+4.0.21 (2009/09/07)
+
+- 쪽지4 튜닝 
+  /memo.config.php
+  /bbs/memo.php
+  
+- 불당썸 업글
+  /extend/b4.lib.php
+  /js/b4.common.js
+  /lib/thumb.lib.php
+
+* 속도를 위해서 select *를 없애기로 했습니다. select *는 db schema를 가져오고
+   다음에 db 값을 가지고 오기 때문에 속도가 확실히 늦습니다.
+* 튜닝 코드에서 오류가 나는 것은 버젼차이에 기인한 것일 수 있습니다.
+   업글을 최근으로 하시기 바랍니다.
+
+
+4.0.20 (2009/06/30)
+
+  /lib/b4.lib.php 
+  /lib.thumb.lib.php 
+
+  /skin/member/basic/memo2_bottom.skin.php 
+  /skin/member/basic/memo2_write.skin.php 
+
+- exec 오류가 있는 경우 쪽지 size를 무조건 첨부파일 최대 크기로 설정 (disk full 나도 몰라요) 
+  /skin/member/basic/memo2_write.skin.php 
+  
+- text 편집모드에서 답글 보낼때 html이 그대로 노출되는 문제 
+  /skin/member/basic/memo2_write.skin.php 
+
+- bottom 메시지 오류 수정 
+  /skin/member/basic/memo2_bottom.skin.php 
+
+- 불당썸 업데이트 
+  /lib/b4.lib.php 
+  /lib.thumb.lib.php
+
+
+4.0.19 (2009/06/15)
+
+  /bbs/memo2_config_update.php 
+  /bbs/memo2_form_update.php 
+  /bbs/memo.php 
+
+  /skin/member/basic/memo2_bottom.skin.php 
+  /skin/member/basic/memo2_config.skin.php 
+  /skin/member/basic/memo2_view.skin.php 
+
+
+- 부재중쪽지 설정 오류 
+  /bbs/memo2_config_update.php 
+  /skin/member/basic/memo2_config.skin.php 
+
+- 특수문자 처리 오류 
+  /bbs/memo2_form_update.php 
+  http://opencode.co.kr/bbs/board.php?bo_table=memo4&wr_id=44 
+
+- 첨부파일 관련 메시지 오류 
+  /skin/member/basic/memo2_bottom.skin.php 
+
+- 내꺼/관리자꺼 쪽지는 신고할 수 없게 하기 
+  /bbs/memo.php 
+  /skin/member/basic/memo2_view.skin.php
+
+
+4.0.18 (2009/06/05)
+
+  /skin/member/basic/memo2_write.skin.php 
+  /skin/member/basic/memo2_list.skin.php 
+
+
+- 공지메모에서 선택삭제 기능 없애기 
+  /skin/member/basic/memo2_list.skin.php 
+
+- 첨부파일 제한 오류 (다내꺼) 
+  /skin/member/basic/memo2_write.skin.php 
+
+- 회원 찾기 부분의 틀어짐 (다내꺼) 
+  /skin/member/basic/memo2_write.skin.php
+
+
+4.0.17 (2009/04/29)
+
+(1) 
+보안을 위해 설정저장화면의 값들중 정수 type은 모두 (int)로 캐스팅을 했습니다.
+첨부파일 관련해서는 M 값 없이 숫자만 입력하게 변경을 했습니다.
+
+(2) 
+db의 필드가 바뀌었습니다. 설정을 저장하면 db가 바뀌지만 손으로 하려면...
+
+ALTER TABLE `g4_memo_config` CHANGE `cf_memo_file_size` `cf_memo_file_size` INT ( 11 ) NULL DEFAULT NULL ;
+
+(3) 
+개인별쪽지 첨부파일 총량제한은 악의를 가진 회원이 쪽지로 첨부파일을 수회
+보내서 호스팅 disk full을 만드는 것을 피하기 위함입니다. 호스팅을 쓰는 경우
+디스크 용량이 문제가 되면 쪽지첨부파일의 개인별 용량을 지정하면 됩니다.
+ 
+(4) 쪽지보기 화면에서 삭제를 할 때는 한번 더 묻습니다. 
+     그냥 지우는건 매너가 아닌듯... ㅎㅎ
+
+(5) 공지쪽지를 회수하는 기능을 넣었습니다. 잘못 나간 공지쪽지를 회수할 수 있어요.
+ 
+
+  /bbs/memo2_config_update.php
+  /bbs/memo2_withdraw_notice.php
+ 
+  /extend/b4.lib.php
+ 
+  /lib/thumb.lib.php
+ 
+  /skin/member/basic/memo2_config.skin.php
+  /skin/member/basic/memo2_view.skin.php 
+  /skin/member/basic/memo2_write.skin.php
+ 
+- 불당썸 업그레이드
+  /lib/thumb.lib.php
+ 
+- 공지쪽지 회수
+  /bbs/memo2_withdraw_notice.php
+  /skin/member/basic/memo2_view.skin.php 
+ 
+- 쪽지 삭제시 confirm 기능추가
+  /skin/member/basic/memo2_view.skin.php
+ 
+- 개인별 쪽지 첨부파일 총량제한  (발신자 기준) 
+  /bbs/memo2_config_update.php
+  /extend/b4.lib.php
+  /skin/member/basic/memo2_config.skin.php
+  /skin/member/basic/memo2_write.skin.php
+
+
+4.0.16 (2009/04/13)
+
+- 전체쪽지 보기화면에서 일반 사용자에게 안읽은 사람 숫자가 보이는 오류 
+  skin/member/basic/memo2_list.skin.php 
+  skin/member/basic/memo2_view.skin.php 
+
+- 불당 resize 업글 
+  extend/b4.lib.php
+  
+
+4.0.15 (2009/04/10)
+
+- 주소록 기능을 mysql 4.0.x 버젼에서도 사용할 수 있게 수정
+  bbs/memo.php
+
+
+4.0.14 (2009/04/09)
+
+- 삭제취소 icon 추가 (멋진여자님 협찬)
+  skin/member/basic/img/icon_undelete.gif
+  skin/member/basic/memo2_view.skin.php
+
+- 불당썸 업글
+  lib/thumb.lib.php
+
+- 불당 Resize 업글
+  extend/b4.lib.php
+
+4.0.13 (2009/04/06)
+
+수신자와 발신자가 동시에 쪽지를 저장할 경우 오류가 나옵니다. ㅠ..ㅠ... 
+이것은 db의 문제가 있기 때문에 기존 사용자의 경우 db를 phpMyAdmin에서 변경해줘야 합니다. 
+
+ALTER TABLE `g4_memo_save` DROP PRIMARY KEY , ADD PRIMARY KEY ( `me_id` , `memo_type` ) 
+
+  adm/memo4.sql 
+  adm/db_memo2_memo4_upgrade.php 
+  bbs/memo2_form_delete.php 
+  bbs/memo2_form_save.php 
+  skin/member/basic/memo2_view.skin.php 
+
+
+- 쪽지 저장 오류 
+  adm/db_memo2_memo4_upgrade.php 
+  /adm/memo4.sql 
+  /bbs/memo2_form_delete.php 
+  /bbs/memo2_form_save.php 
+
+- 삭제취소 버튼 오류 (이미지가 없어서 text로 했습니다 ㅠ..ㅠ...) 
+  skin/member/basic/memo2_view.skin.php
+
+
+4.0.12 (2009/03/31)
+
+  bbs/memo.php
+  bbs/memo2_config_update.php
+  bbs/memo2_form_spam.php
+  bbs/memo2_form_update.php
+  bbs/realtime_memo.php
+  skin/member/basic/memo2.skin.php
+  skin/member/basic/memo2_bottom.skin.php
+  skin/member/basic/memo2_config.skin.php
+  skin/member/basic/memo2_write.skin.php
+
+- 쪽지 첨부파일최대 용량 제한 (어차피 100메가 그렇게 하지는 않을거니까 최대 20m 이하로?)
+  bbs/memo2_config_update.php
+  bbs/memo2_form_update.php
+  skin/member/basic/memo2_config.skin.php
+  skin/member/basic/memo2_bottom.skin.php
+
+- 사용자가 정할 것이 없으면, 설정 버튼이 나오지 않게 하기
+  skin/member/basic/memo2.skin.php
+  skin/member/basic/memo2_config.skin.php
+
+- 관리자의 스팸취소 오류
+  bbs/memo2_form_spam.php 
+
+- 쪽지 검색오류 (urlencode를 해서 문제가 되네요. stx와 sfl은 strip_tags만 합니다)
+  bbs/memo.php
+
+- 실시간쪽지 (xmlHTTP가 없을 때는 check를 하지 않게 하기)
+  bbs/realtime_memo.php
+
+- 쪽지쓰기 에디터의 높이를 줄이기
+  skin/member/basic/memo2_write.skin.php
+
+- 쪽지4 초기설정 추가
+  skin/member/basic/memo2_config.skin.php
+
+
+4.0.11 (2009/03/30 - 별도배포용 버젼에만 해당하는 사항임)
+
+- cheditor 오류 (이미지 줄 안맞음)
+  cheditor4/comment.js
+
+4.0.10 (2009/03/27)
+
+  cheditor4/comment.js
+  skin/member/basic/memo2_config.skin.php
+
+- cheditor의 사용 프로그램을 php로 변경
+  cheditor4/comment.js
+
+- 설정할 것이 없을 때 화면깨짐
+  skin/member/basic/memo2_config.skin.php
+
+
+4.0.9 (2009/03/26)
+
+  bbs/memo_form.php 
+
+  skin/member/basic/memo2_config.skin.php 
+  skin/member/basic/memo2_list.skin.php 
+  skin/member/basic/memo2_view.skin.php 
+  skin/member/basic/img/send2.gif 
+  skin/member/basic/img/bt02.gif 
+  skin/member/basic/img/bt04.gif 
+  skin/member/basic/img/all_del.gif 
+
+- sideview.js를 수정하지 않아도 되게 프로그램 수정 
+  bbs/memo_form.php 
+
+- 후줄근한 이미지 파일 교체 (hades708님 협찬) 
+  skin/member/basic/memo2_config.skin.php 
+  skin/member/basic/memo2_list.skin.php 
+  skin/member/basic/memo2_view.skin.php 
+  skin/member/basic/img/send2.gif 
+  skin/member/basic/img/bt02.gif 
+  skin/member/basic/img/bt04.gif 
+  skin/member/basic/img/all_del.gif
+
+
+4.0.8 (2009/03/25)
+
+  bbs/memo2_chkunlinkfile.php
+  bbs/memo2_form_delete.php
+  bbs/memo2_form_delete_all_trash.php
+
+- 쪽지삭제 코드의 mysql 호환성 문제
+  bbs/memo2_chkunlinkfile.php
+  bbs/memo2_form_delete.php
+  bbs/memo2_form_delete_all_trash.php
+
+
+4.0.7 (2009/03/25)
+
+  bbs/memo2_form_delete.php
+  bbs/memo2_form_delete_all_trash.php
+
+  skin/member/basic/memo2_write.skin.php
+
+- 테스트용 코드 삭제 (테스트 하고 안지웠네요 ㅠ..ㅠ...)
+  bbs/memo2_form_delete.php
+
+- 첨부파일이 없을 때 삭제함 쪽지 비우기 오류
+  bbs/memo2_form_delete_all_trash.php
+
+- 아이디가 지정된 쪽지보내기 화면의 focus를 제목으로
+  skin/member/basic/memo2_write.skin.php
+
+
+4.0.6 (2009/03/24)
+
+  /bbs/memo.php
+  /bbs/realtime_memo.php
+  /bbs/memo2_config_update.php
+  /skin/member/basic/memo2_config.skin.php
+  /skin/member/basic/memo2_online.skin.php
+
+- 실시간쪽지 ajax 함수 중복오류 방지 (함수명 변경. 예: hideLayer -> b4_hideLayer)
+  /bbs/realtime_memo.php
+
+- 쪽지4 이름으로 사용하게 수정 (설정추가+코드변경)
+  /bbs/memo.php
+  /bbs/memo2_config_update.php
+  /skin/member/basic/memo2_config.skin.php
+  /skin/member/basic/memo2_online.skin.php 
+
+
+4.0.5 (2009/03/20)
+
+  bbs/memo2_config_update.php 
+  bbs/memo2_form_update.php
+  bbs/realtime_* (3개)
+  skin/member/basic/memo2_config.skin.php
+
+- 첨부파일의 이미지 정보를 확인 (이미지가 아닌거는 못 올라가게)
+  bbs/memo2_form_update.php
+
+- 실시간쪽지 설정 추가 (사이트 전체의)
+  bbs/memo2_config_update.php
+  skin/member/basic/memo2_config.skin.php
+
+- 실시간쪽지 기능 버젼업
+  bbs/realtime_* (3개)
+
+
+4.0.4 (2009/03/16)
+
+  bbs/memo2_config_update.php 
+  bbs/memo2_form_update.php 
+
+  extend/b4.lib.php 
+  lib/thumb.lib.php 
+
+  skin/member/basic/memo2_config.skin.php 
+  skin/member/basic/memo2_view.skin.php 
+
+이상하게도 cafe24의 php 4.3.1에서는 제 서버환경과 전혀 다른 결과가 나와요. ㅠ..ㅠ... 
+이때 회피할 수 있는 work-around를 찾고 있는데, 아직까지 방법을 못 찾았습니다. 
+그림에서 문제가 되는 경우 불당 resize를 안쓰고 기존 방법을 쓸 수 밖에없네요. 
+
+첨부이미지 때문에 문제가 되시는 경우, 이 버젼을 쓰신 후 옵션을 바꿔주세요. 
+
+
+- 불당썸/resize 버젼업 
+  extend/b4.lib.php 
+  lib/thumb.lib.php 
+
+- 자동응답 SQL 오류 수정 (프로그램을 하다가 그만뒀네요 ㅠ..ㅠ...) 
+  bbs/memo2_form_update.php 
+
+- 불당 resize가 안되는 경우를 위한 resize 방법 선택옵션 추가 (ulscc) 
+  bbs/memo2_config_update.php 
+  skin/member/basic/memo2_config.skin.php 
+  skin/member/basic/memo2_view.skin.php
+
+
+4.0.3 (2009/03/13)
+
+4.31.00 이전버젼의 그누를 사용하는 경우 그누 설정 때문에 글쓰기에 문제가 있을 수 있어요. 
+config.php를 수정해도 되기는 해도, 많은 분들이 그런 방법을 찾기까지 어려움이 있을 수가 
+있기 때문에, memo.config.php를 수정 했습니다. 
+
+4.0.2를 수정한 이후에 해당 문제를 인지해서, 4.0.2를 재수정해서 올리기도 그래서 4.0.3으로 
+올립니다. 
+
+--- 
+부재중 설정을 하면, 자동으로 응답이 됩니다. 
+그런데, 일부의 경우 쪽지만 보내고 수신은 안하는 경우가 있습니다. 그건 막아야죠. 
+정보변경과 달리 이거는 며칠정도로 짧게 설정하시면 됩니다. 
+
+만일 누군가 실수로 설정을 했다면, 관리자가 잠시 0일로 바꾸거나 db에서 처리해주세요. 
+
+
+. 4.0.3 
+  
+  memo.config.php 
+  bbs/memo.php 
+  bbs/memo2_chkunlinkfile.php 
+  skin/member/basic/memo2_config.skin.php 
+
+- cheditor4가 없는 구버젼의 그누보드를 위해서 cheditor4 설정이 없으면 추가하게 
+  memo.config.php 
+
+- encoding 오류 (UTF-8로 되어 있어써요 ㅠ..ㅠ..) 
+  bbs/memo2_chkunlinkfile.php 
+
+- 부재중 설정일 때는 쪽지 사용을 못하게 하기 (보고 싶은 것만 보고 발신만 하는 것 막기 위해서) 
+  bbs/memo.php 
+  skin/member/basic/memo2_config.skin.php 
+
+- 부재중 알림메모 내용을 기본으로 설정 
+  skin/member/basic/memo2_config.skin.php 
+
+- 부재중 설정을 해제하면 정해진 시간 이후에 변경할 수 있게 하기 (정보수정 제한과 동일 이유) 
+  skin/member/basic/memo2_config.skin.php
+
+
+4.0.2 (2009/03/13)
+
+불당썸+resize 의 버젼업과 사소한 수정만 했습니다. 
+
+-- 
+
+  adm/db_memo_memo4_upgrade.php 
+  adm/db_memo2_memo4_upgrade.php 
+
+  extend/b4.lib.php 
+  lib/thumb.lib.php 
+
+  skin/member/basic/memo2.skin.php 
+  skin/member/basic/memo2_view.skin.php 
+
+
+- 쪽지보기 script의 사소한 수정 (script를 java script라고 명확하게) 
+  skin/member/basic/memo2_view.skin.php 
+
+- 메뉴 부분의 엉뚱한 공백 제거 (푸른돌님) 
+  skin/member/basic/memo2.skin.php 
+
+- 쪽지 -> 쪽지4 변환 스크립트 오류 
+  adm/db_memo_memo4_upgrade.php 
+
+- 쪽지2->쪽지4 변환 스크립트 오류 
+  adm/db_memo2_memo4_upgrade.php 
+
+- 불당썸 + resize 버젼업 
+  extend/thumb.lib.php 
+  extend/b4.lib.php
+
+
+4.0.1 (2009/03/09)
+썸네일 프로그램은 별도로 버젼관리가 되고 있습니다. 최신 버젼으로 교체하세요 ^^ 
+http://sir.co.kr/bbs/board.php?bo_table=g4_tiptech 
+
+--- 
+친구관리쪽에 문제 개선은 코드가 너무 복잡해서 해결이 안될거 같더라구요. ㅠ..ㅠ... 
+나중에 시간을 내서 친구관리 전체를 싹~ 다시 개발할 때 수정하겠습니다. 
+
+그리고, 심각한 버그는 더이상 없는거 같아서, 4.0.1을 정식으로 release 합니다. 
+버그처리 및 프로그램 개선에 도움을 주신 분들께 감사드립니다. Good Job~! 
+-- 
+
+  bbs/memo2_form_notice_update.php 
+
+  extend/b4.lib.php 
+  lib/thumb.lib.php 
+
+  skin/member/basic/memo2_list.skin.php 
+  skin/member/basic/memo2_online.skin.php 
+  skin/member/basic/memo2_view.skin.php 
+  skin/member/basic/memo2_write.skin.php 
+
+
+- resize 1.0.7 + thumb 2.0.2 
+  extend/b4.lib.php 
+  lib/thumb.lib.php 
+
+- 현재접속자 중복표시 (g4_login 테이블에 중복해서 record가 기록되는 경우) 
+  skin/member/basic/memo2_online.skin.php 
+
+- 전체쪽지를 레벨로 보낼 수 있게 하기 
+  skin/member/basic/memo2_list.skin.php 
+  skin/member/basic/memo2_view.skin.php 
+  skin/member/basic/memo2_write.skin.php 
+  bbs/memo2_form_notice_update.php
+  
+
+★ 기본개요 
+
+쪽지2는 제가 운영하는 사이트에서 쓰기 좋게 조금씩 기능을 붙여가는 과정이었기에 
+설치부터 사용까지 그때그때 필요에 의해 만든 짜집기로 기능 오류가 나름 많았습니다. 
+
+쪽지4는 쪽지2를 만들면서 부족했던 부분을 보완하였고 코드를 처음부터 다시 리뷰하면서 
+효율성과 합리성을 가지도록 재구성 하였기에 설치부터 사용까지 전체적으로 개선 되었습니다. 
+
+쪽지4는 제가 기준으로 하는 그누보드 코드인 그누보드4 불당팩의 기본 쪽지 입니다. 
+
+쪽지2만 배포했을 때는 없었던 오류 리포팅이 쪽지4를 불당팩에 포함시켜서 배포하면서 
+빈번하게 이루어져서 쪽지4만을 별도로 배포하지 않는 것이 의미 없다고 생각하기도 했고 
+많은 노력이 들어간 코드를 아무런 조건없이 배포하는 것에 대한 아쉬움도 있어습니다. 
+
+작은 시스템이지만 1-2만원 정도에 판매를 해서, 개발 tool의 구매에 사용을 할까 생각을 
+했었습니다. 저도 적정 수준의 개발 보조도구들은 필요하기에 약간의 지원은 필요 합니다. 
+
+쪽지2는 그누보드 4.22.06 버젼까지 입니다. 그누보드 4.30.00 이후부터 관리자님의 프로그램의 
+스타일이 바뀌었고 몇가지 근본적 변동이 있어서 쪽지2는 4.30.00 버젼 이후에는 문제가 있으며 
+쪽지4는 cheditor 4.3.x 버젼을 사용하는 그누보드 4.30.00 이후버젼부터 적용이 가능 합니다. 
+
+쪽지4는 db도 더 확장되었고, 설정을 별도 db로 분리했지만, 원본을 더 많이 수정해야 합니다. 
+원본의 수정과 follow-up에 자신이 없는 경우, 쪽지4를 설치하지 마시기 바랍니다. 
+
+쪽지4의 경우도 불당팩과 같이 sir.co.kr에는 major release만 업로드 할 것이며, 
+짧은 버젼업은 opencode.co.kr 에서 이루어질 것 입니다. 
+
+쪽지4의 오류등록, 개선사항, 배포는 sir과 opencode에서만 가능 합니다. 
+http://sir.co.kr/bbs/board.php?bo_table=g4_pi_memo2 
+http://opencode.co.kr/bbs/board.php?bo_table=memo4

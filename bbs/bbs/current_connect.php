@@ -1,0 +1,1 @@
+<script>location.href='/bbs/current_connect.php';</script>

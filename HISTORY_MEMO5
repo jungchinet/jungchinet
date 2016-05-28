@@ -1,0 +1,330 @@
+2.0.5 - 2012년 12월 30일
+
+현재 사용자들에게는 큰 상관없는 패치 입니다. 정밀한 수정은 아니고... 대충...
+ 
+bbs/memo.php
+bbs/memo2_form_recover.php
+ 
+skin/member/basic/memo2.list.skin.php
+ 
+ 
+- 테이블 /td 누락
+skin/member/basic/memo2.list.skin.php
+ 
+- 삭제된 쪽지함에 부적절 데이터가 있는 경우
+bbs/memo.php
+bbs/memo2_form_recover.php
+
+
+2.0.4 - 2012년 12월 16일
+
+그누 기본쪽지의 발신이 있는 경우 삭제오류가 있습니다. 
+그런 경우에도 쪽지가 지워지게 하기 위해서, 설정을 하나 더 추가했습니다.
+memo.config.php에서 아래 필드를 0으로 하면 됩니다.
+ 
+테스트 부탁드립니다.
+===
+ 
+$g4['memo_delete'] = 0;
+ 
+memo.config.php
+ 
+bbs/memo2_form_delete.php
+bbs/memo2_form_update.php
+ 
+ib/b4.lib.php
+ 
+skin/member/basic/memo2_group_admin.skin.php
+skin/member/basic/memo2.head.skin.php
+skin/member/basic/memo2_online.skin.php
+skin/member/basic/memo2.view.skin.php
+ 
+ 
+- 쪽지 삭제 오류 수정
+bbs/memo2_form_delete.php
+ 
+- 현재접속자 페이징 오류 수정
+skin/member/basic/memo2_online.skin.php
+ 
+- 실명을 쓸 때, 메시지가 실명으로 나오게
+bbs/memo2_form_update.php
+ 
+- 수평 스크롤바 생기는거
+skin/member/basic/memo2.head.skin.php
+ 
+- 목록 버튼 위치변경
+skin/member/basic/memo2.view.skin.php
+ 
+- 삭제기능 보완
+memo.config.php
+lib/b4.lib.php
+ 
+- 그룹관리 오류 수정
+skin/member/basic/memo2_group_admin.skin.php
+https://github.com/open2/memo5-v2/commit/20fd3596f04d0de76ea99b9022b4d9a0487d485d
+
+
+2.0.3 - 2012년 11월 9일
+
+친구찾기를 악용하지 못하게 하는 방법을 여러모로 고민했고 (리포팅은 없었지만)
+몇가지를 보강했지만, 완벽하지 않습니다.
+그래서, 친구찾기를 하는 것에 대해서 reporting을 남겨두려는 것 입니다.
+
+프로그램을 보니까 문제가... 쪽지 포인트가 +인 경우 친구찾기 하면 + 포인트가 적립 됩니다.
+차감이 아니었습니다. =..=...
+
+그래서, 설정에서 default -1로 해두려고 합니다.
+
+memo.config.php
+bbs/write_id.php
+
+- 친구찾기를 할 때 차감하는 포인트를 설정으로 분리
+memo.config.php
+bbs/write_id.php
+
+
+2.0.2 - 2012년 11월 9일
+
+* 친구찾기를 사용할 경우 쪽지보내기 만큼의 포인트를 차감 합니다.
+이것은 보안 모니터링의 목적으로 넣은 것 입니다.
+
+memo.config.php
+bbs/write_id.php
+
+- 회원찾기 (관리자는 모든 제약을 없앰 등등)
+memo.config.php
+bbs/write_id.php
+
+- 안쓰는 파일삭제
+skin/member/basic/css/* (6개 파일)
+skin/member/basic/img/memo_box4* (4개)
+skin/member/basic/img/memo_line2* (4개)
+
+
+2.0.1 - 2012년 11월 8일
+
+memo.config.php
+
+bbs/download_memo_file.php
+bbs/memo2_config_update.php
+bbs/memo2_form_cancel.php
+bbs/memo2_form_delete.php
+bbs/memo2_form_update.php
+bbs/memo2_withdraw_notice.php
+
+skin/member/basic/memo2.head.skin.php
+skin/member/basic/memo2_view.skin.php
+
+- 쪽지보기 위, 아래 폭을 넓게 (10px -> 30px) 하단부 버튼 겹침현상 수정
+skin/member/basic/memo2_view.skin.php
+
+- 프로그램 정리
+bbs/download_memo_file.php
+bbs/memo2_config_update.php
+bbs/memo2_form_cancel.php
+bbs/memo2_form_delete.php
+bbs/memo2_form_update.php
+bbs/memo2_withdraw_notice.php
+skin/member/basic/memo2.head.skin.php
+
+- 쪽지발신 간격 조정 (60초에서 10초)
+memo.config.php
+
+
+2.0.0 - 2012년 11월 7일
+
+쪽지5를 오랜만에 조금(?) 업데이트 했습니다.
+쪽지5는 아빠불당이 오래전에 개발한 쪽지2에 기반 하는데,
+쪽지2를 처음 개발할 당시에는 table도 모르고, php도 모르고 그냥 마구 개발 했고,
+이후 쪽지4, 쪽지5로 변경하면서 일부 수정은 되었지만 많은 코드들이 정리되지 않았습니다.
+
+쪽지5 시즌2 - 2.0.0의 목적은 조금 더 스킨이 쉽게 만든 것 입니다.
+아직도 테이블을 쓰고 있지만 (테이블이 속도나 보기에 좋아서 유명 사이트도 테이블 씁니다)
+기존 코드보다는 조금 더 스킨을 뜯어 고치기 좋을 것 입니다.
+
+미결 사항은 공지쪽지 관련 기능정리 입니다.
+제가 요즘 머리가 아픈 일들이 많아서, 생각을 오래하기 힘들어서, 그부분은 시즌 3로 넘겨 둡니다.
+
+실전에 쓰셔도 큰 문제는 없을 것이라 생각하고, 데모는 opencode 입니다.
+수정이나 추가 개선이 필요하면 알려주세요. 롸잇~나우~
+
+수정 상세 내역을 보시려면 요기를 보시면 됩니다.
+https://github.com/open2/memo5-v2/commits/master
+
+쪽지5를 비롯한 opencode의 저작권은 한가지 입니다.
+" 있는 그대로를 돈 받고 팔지 말아라 " 입니다.
+http://www.opencode.co.kr/bbs/board.php?bo_table=notice&wr_id=25
+
+수정사항
+- NHN UX로 변경 (우측)
+- 속도개선 
+- php 5.4.x 대응
+- 공지게시판 기능 관련 삭제 (실제 개발하다가 중단...)
+- ads(홍보), temp(임시저장), club(클럽쪽지) 관련 코드 삭제 - 앞으로 안쓸거임.
+- 불필요 코드 삭제, 코드정리 (압축기준 274kb에서 235kb로 용량이 줄었습니다)
+
+
+1.0.13 - 2012년 10월 22일
+
+bbs/memo2_form_update.php
+
+- 쪽지폭탄 제거
+bbs/memo2_form_update.php
+http://opencode.co.kr/bbs/board.php?bo_table=memo4&wr_id=500
+
+
+1.0.12 - 2012년 9월 24일
+
+memo.config.php의 적당한 곳에 아래 코드를 넣습니다.
+
+// 메모를 지정된 시간이 지나야 보낼 수 있게 설정
+$g4['memo_delay_sec'] = 60;
+==
+
+memo.config.php
+bbs/memo.php
+bbs/memo2_form_update.php
+
+- 해킹으로 인한 쪽지 대량발송 방지
+memo.config.php
+bbs/memo.php
+bbs/memo2_form_update.php
+
+
+1.0.11 - 2012년 5월 14일
+
+memo.config.php
+bbs/memo.php
+ 
+- 공지쪽지 관련 권한 오류
+bbs/memo.php
+http://opencode.co.kr/bbs/board.php?bo_table=memo4&wr_id=443
+
+- 보안패치 (버젼에 상관없이 반드시 바꾸세요)
+memo.config.php
+
+
+1.0.10 - 2012년 2월 22일
+
+lib/b4.lib.php
+ 
+- 미수신쪽지 삭제시 알림이 정리 안되는 오류 수정
+lib/b4.lib.php
+
+
+1.0.9 - 2011년 12월 01일
+
+bbs/memo2_form_cancel.php
+bbs/memo2_form_delete.php
+ 
+lib/b4.lib.php
+ 
+skin/member/basic/memo2.head.skin.php
+ 
+ 
+- 발신쪽지 삭제/발신 취소의 기능을 함수로 정리, 쪽지 삭제시 받은 쪽지 갯수 -1 하고, 쪽지 알림에서 삭제
+bbs/memo2_form_cancel.php
+bbs/memo2_form_delete.php
+lib/b4.lib.php
+ 
+- 쪽지 공지의 줄바꿈 
+skin/member/basic/memo2.head.skin.php
+ 
+- 쪽지 공지의 위치변경 (조금 더 잘보이게)
+skin/member/basic/memo2.head.skin.php
+
+
+1.0.8 - 2011년 11월 23일
+
+- 이미지 윈도우창 관련 개선
+js/b4.common.js
+
+
+1.0.7 - 2011년 11월 18일
+
+- 보안관련 이슈
+bbs/write_id.php
+
+
+1.0.6 - 2011년 11월 13일
+
+skin/member/basic/memo2_online.skin.php
+ 
+- ff/chrome 관련 오류 수정
+skin/member/basic/memo2_online.skin.php
+
+
+1.0.5 - 2011년 10월 11일
+
+lib/b4.lib.php
+skin/member/basic/memo2_list.skin.php
+ 
+- 받은 쪽지함에 파일정보 없는 오류
+lib/b4.lib.php
+ 
+- 쪽지목록의 제목 좌측정렬 
+skin/member/basic/memo2_list.skin.php
+
+
+1.0.4 - 2011년 9월 27일
+
+bbs/memo.php
+ 
+- 쪽지의 위치가 안나오는 오류 수정
+bbs/memo.php
+
+
+1.0.3 - 2011년 9월 20일
+
+bbs/memo.php
+ 
+- dhtml 편집기를 mobile 환경에서는 쓸 수 없게 설정
+bbs/memo.php
+
+
+1.0.2 - 2011년 9월 14일
+
+skin/member/basic/memo2_write.skin.php
+ 
+- 웹편집기 사용시 아이콘이 너무 길게 늘어져서 화면이 깨지는거
+skin/member/basic/memo2_write.skin.php
+
+
+1.0.1 - 2011년 9월 9일
+
+bbs/memo.php
+skin/member/basic/memo2.tail.skin.php
+skin/member/basic/memo2_write.skin.php
+ 
+- typo 오류 수정
+skin/member/basic/memo2.tail.skin.php
+ 
+- 첨부파일 관련 기능 오류 수정 및 코드 이동 (생각없는 코딩)
+bbs/memo.php
+skin/member/basic/memo2_write.skin.php
+
+
+1.0.0 - 2011년 9월 7일 (initial release)
+
+
+쪽지 5 개선사항
+
+- 라이센스 관련 코드 삭제
+- 쪽지 보내기 SQL 코드를 b4.lib.php로 이동 (재사용을 위해서)
+- 무조건 cheditor5를 써야 합니다. sir.co.kr 또는 opencode.co.kr에서 받으세요.]
+- 안읽은 쪽지 갯수를 처음 쪽지5 로딩할 때만 계산하게
+- 속도개선 (불필요한 과잉 SQL Query 등의 삭제 등으로 2배 이상 빨라질 겁니다.)
+- 어설프게 분리된 스킨을 완전히 코드와 분리 (별도의 스킨 제작이 가능하게, write/view/list/...)
+- skin 분리를 위해 쪽지 경로 정의, $memo_skin_path, $memo_file_path
+- 실명 사용시 검색이 안되던 오류 수정
+- 관리자도 포인트 기록이 남게 수정
+- 보안개선
+- 불필요 (안쓰는) 파일 삭제
+- 쪽지 전체 안읽은 쪽지 갯수 구하기 방법 개선 (신규 수신 쪽지가 있을 때만 계산하게)
+- 배추빌더에서 나오는 header 오류 수정
+- 코드의 통일성을 위해 extend/b4.lib.php를 삭제 (lib 디렉토리로 이동)
+ 
+아래의 3 파일은 삭제해야 합니다. 안씁니다.
+extend/b4.lib.php
+bbs/memo2_form.php
+skin/member/basic/memo2_bottom.skin.php

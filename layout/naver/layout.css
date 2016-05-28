@@ -1,0 +1,50 @@
+/* Layout Generator - NHN - http://html.nhncorp.com/uio_factory/uio_generator/layout/1 */
+#wrap {
+    width:1100px;         /* 전체 넓이 = snb + snb margin-right + content + aside + aside margin-left */
+    margin:0 auto;    /* 왼쪽을 5px 만큼 띄워 줍니다 */
+    float:center;
+}
+
+#header {
+    width:100%;
+}
+#container {
+    margin: 5px 0 0 0;    /* 위쪽을 5px 만큼 띄워 줍니다 */
+    width:100%;
+}
+#container:after {
+    display:block;
+    clear:both;
+    content:'';
+}
+#footer {
+    width:100%;
+}
+#content {
+    float:left;
+    width:770px;      /* 내용부의 넓이 */
+}
+.snb {
+    float:left;
+    width:165px;      /* 좌측 메뉴부의 넓이 */
+    margin-right:0px; /* 띄워주기 */
+}
+.aside {
+    float:right;
+    width:165px;      /* 우측 사이드의 넓이 */
+	margin: 16px 0 0 0;
+    margin-left:0px;  /* 띄워주기 */
+}
+.gnb {
+}
+.sta {
+    position:relative;
+    width:100%;
+    margin:0 auto;
+    padding-top:5px;
+}
+.sta:after {
+    display:block;
+    clear:both;
+    content:''
+}

@@ -1,0 +1,32 @@
+* {
+	margin:0;
+	padding:0;
+}
+/* sub header */
+.subheader {
+	font: Bold 1.2em Verdana, 'Trebuchet MS', Sans-serif;
+	margin: 6px 0px 6px 0;
+	padding: 5px 5px 5px 25px;
+	background: #FDFDFD url(../img/icos.gif) no-repeat 5px 50%;
+	border-top: 1px solid #DEDEDE;
+	border-bottom: 1px solid #DEDEDE;
+}
+
+
+
+.boardHeader { position:relative; _width:100%; border:1px solid #e1e1dd; border-bottom:none; background:#ffffff url(../img/bgH3.gif) repeat-x left bottom; overflow:hidden;}
+.boardHeader h3 { float:left; clear:both; font-size:1.2em; padding:0.4em 2em .4em 1.2em; border-bottom:3px solid #fe3614; background:#ffffff url(../img/lineH3.gif) no-repeat right bottom;}
+
+/* boardComment */
+.boardComment { color:#AEAEAE; position:relative; border:1px solid #DDDDDD; overflow:hidden;padding:.5em; margin-top:.4em;}
+.boardComment a { color:#f38d2a; text-decoration:none; border-bottom:1px dotted #f38d2a;}
+
+div.item_text { color:#636363; padding:0 10px 10 10px; margin-top:10px; border-bottom:1px solid #e1e1e1;}
+div.item_text2 { color:#636363; padding:0 10px 0 10px; margin-top:10px; margin-bottom:10px;}
+div.item_text3 { color:#636363; padding:10 10px 10 10px; float:right;}
+div.item_text strong { font-weight:bold; color:#000000; font-family:µ¸¿ò; font-size:12px; }
+
+.clear { clear:both; }
+
+div.search { width:99%;padding:0; margin:0 ; overflow:hidden; }
+div.keyword { width:100%; padding:0; margin:0; }

@@ -1,0 +1,105 @@
+select{
+    font-size:11px;
+    color:#666;
+}
+ 
+/* select box title */
+span.selectbox_title{
+    text-align:left;
+    padding:2px 15px 2px 3px;
+    border:1px solid #999;
+    background:#FFF url(http://www.psyonline.kr/blog/images/sample/select_arrow.gif) no-repeat 100% 0;
+}
+span.selectbox_title strong{
+    width:100%;
+    height:1em;
+    font-weight:normal;
+    font-size:11px;
+    color:#666;
+    word-break:break-all;
+    line-height:1.2em;
+    padding:1px 0 2px;
+    _padding:2px 0 1px;
+    display:block;
+    overflow:hidden;
+}
+span.selectbox_title_focus{
+    border-color:#333;
+}
+span.selectbox_title_focus strong{
+    color:#000;
+}
+span.selectbox_title_disabled{
+    background-color:#EEE;
+}
+span.selectbox_title_disabled strong{
+    color:#999;
+}
+ 
+/* select box option */
+div.selectbox_option{
+    border:1px solid #999;
+    background:#FFF;
+    overflow:hidden;
+}
+div.selectbox_option ul{
+	margin:2px;
+	padding:0px;
+}
+div.selectbox_option li{
+    list-style:none;
+}
+div.selectbox_option a{
+    height:1em;
+    font-size:11px;
+    color:#888;
+    word-break:break-all;
+    line-height:1.4em;
+    text-decoration:none;
+    padding:2px 3px 5px;
+    _padding:3px 3px 4px;
+    display:block;
+    overflow:hidden;
+}
+div.selectbox_option a.on,
+div.selectbox_option a:hover{
+    color:#000;
+    background:#EEE;
+}
+ 
+/* select box multiple */
+span.selectbox_multiple{
+    border:1px solid;
+    border-color:#999;
+    background:#FFF;
+    display:inline-block;
+    overflow:hidden;
+}
+span.selectbox_multiple ul li{
+    height:1em;
+    font-size:11px;
+    color:#666;
+    word-break:break-all;
+    line-height:1.4em;
+    padding:1px 3px 4px;
+    _padding:2px 3px 3px;
+    display:block;
+    overflow:hidden;
+}
+span.selectbox_multiple ul li.on{
+    color:#000;
+    background:#CCC;
+}
+span.selectbox_multiple_focus{
+    border-color:#333;
+}
+span.selectbox_multiple_focus ul li.on{
+    color:#000;
+    background:#BBB;
+}
+span.selectbox_multiple_disabled{
+    background-color:#EEE;
+}
+span.selectbox_multiple_disabled ul li{
+    color:#999;
+}

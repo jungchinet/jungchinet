@@ -1,0 +1,16 @@
+.menu_v{position:relative;width:100%;font-size:12px;font-family:Tahoma, Geneva, sans-serif;line-height:normal}
+.menu_v ul{margin:0;padding:0;list-style:none}
+.menu_v li{position:relative;margin:0 0 -1px 0;vertical-align:top;*zoom:1}
+.menu_v li a{display:block;position:relative;padding:8px 10px;color:#666;font-weight:bold;text-decoration:none;background:#fafafa;border:1px solid #eee;*zoom:1}
+.menu_v li a .i{position:absolute;top:50%;left:100%;width:8px;height:8px;margin:-4px 0 0 -16px;color:#ccc;background:url(img/ico_sub.gif) no-repeat left top}
+.menu_v li ul{padding:5px 0;background:#fff}
+.menu_v li li{margin:0}
+.menu_v li li a{padding:5px 10px;border:0;background:#fff;font-weight:normal}
+.menu_v li li a span{color:#666}
+.menu_v li.active{z-index:2;border:1px solid #ccc}
+.menu_v li li.active{border:0}
+.menu_v li.active a{border:0;color:#000}
+.menu_v li.active .i{background-position:0 -44px}
+.menu_v li.active li a{border:0}
+.menu_v li.active ul{display:block;border-top:1px solid #eee}
+.menu_v li.active li.active a span{font-weight:bold;color:#13b200;letter-spacing:-1px}

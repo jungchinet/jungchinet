@@ -1,0 +1,26 @@
+php_flag register_globals on
+
+ErrorDocument 403 /error_page.php
+ErrorDocument 404 /error_page.php
+
+# to protect dbconfig.php
+<Files dbconfig.php>
+order allow,deny
+deny from all
+</Files>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# 에그당님의 경로줄이기 수정사항 - http://sir.co.kr/bbs/board.php?bo_table=cm_free&wr_id=357156
+RewriteCond %{REQUEST_URI}    !^/adm/?$ 
+RewriteCond %{REQUEST_URI}    !^/login/?$
+RewriteCond %{REQUEST_URI}    !^/m/?$
+RewriteCond %{REQUEST_URI}    !^/pm/?$ 
+RewriteCond %{REQUEST_URI}    !^/rss_proc/?$
+
+# 곱슬최씨님의 경로줄이기 - http://sir.co.kr/bbs/board.php?bo_table=g4_tiptech&wr_id=20648
+RewriteRule ^([a-zA-Z0-9_]+)$                   ./bbs_shorten.php?bo_table=$1
+RewriteRule ^([a-zA-Z0-9_]+)/([0-9]+)$          ./bbs_shorten.php?bo_table=$1&wr_id=$2
+RewriteRule ^([a-zA-Z0-9_]+)/([0-9]+)/([0-9]+)$ ./bbs_shorten.php?bo_table=$1&wr_id=$2&c=$3
+</IfModule>

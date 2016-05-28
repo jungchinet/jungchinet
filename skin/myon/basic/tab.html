@@ -1,0 +1,166 @@
+<style>
+ul, li {list-style:none; margin:0; padding:0; font-size:9pt; }
+
+.image_list {clear:both;overflow: hidden;position: relative;height: 250px;width: 100%px; border:1px solid #e1e1e1; cursor:pointer;}
+.image_list .images {position:absolute; display:none; padding:10px 0px 0px 10px;  }
+
+.tab {width:100%;cursor:pointer; }
+.tab li {width:80px;float:left;border-right:1px solid #e1e1e1;border-top:1px solid #e1e1e1;padding-top:10px; padding-left:0px; padding-right:0px; padding-bottom:7px; text-align:center;  }
+.tab li.fir {border-left:1px solid #e1e1e1;}
+
+
+.tab li.tabOutClass {font-weight:normal;color:#707070;background-color:#ffffff}
+.tab li.tabOverClass {font-weight:bold;color:#000;background-color:#F5F3F3;}
+</style>
+
+<ul class="tab" id="tab">
+	<li class="tabOverClass fir" overcss="tabOverClass" outcss="tabOutClass fir"><a href="./whatson.php">Whats on</a></li>
+	<li class="tabOutClass" overcss="tabOverClass" outcss="tabOutClass"><a href="<?=$g4[bbs_path]?>/new.php?gr_id=&mb_id=<?=$member[mb_id]?>&view_type=c">최근 코멘트</a></li>
+	<li class="tabOutClass" overcss="tabOverClass" outcss="tabOutClass"><a href="<?=$g4[bbs_path]?>/new.php?gr_id=&mb_id=<?=$member[mb_id]?>">최근 게시글</a></li>
+	<li class="tabOutClass" overcss="tabOverClass" outcss="tabOutClass">신고된 내역</li>
+	<li class="tabOutClass" overcss="tabOverClass" outcss="tabOutClass">신고한 내역</li>
+	<li class="tabOutClass" overcss="tabOverClass" outcss="tabOutClass"><a href='<?=$g4[bbs_path]?>/recycle_list.php'>휴지통</a></li>
+</ul>
+<div class="image_list" id="image_list">
+	<div  class="images" style="display:block">  <?
+    for ($i=0; $row = sql_fetch_array($whatson_result); $i++) {
+        $url = "$g4[bbs_path]/board.php?bo_table=$row[bo_table]&wr_id=$row[wr_id]";
+        if ($row[comment_id])
+            $url .= "#c_" . $row[comment_id];
+        echo "<a href='" . $url . "'>";
+        echo cut_str($row[wr_subject], $subject_len) ." ($row[wo_count])</a>";
+        echo "<br>";
+    }
+    ?></div>
+<div class="images"> <?
+    for ($i=0; $row = sql_fetch_array($comment_result); $i++) {
+        $tmp_write_table = $g4[write_prefix] . $row[bo_table];
+        $write = sql_fetch(" select wr_subject from $tmp_write_table where wr_id = '$row[wr_parent]' ");
+        $href = "$g4[bbs_path]/board.php?bo_table=$row[bo_table]&wr_id=$row[wr_parent]#c_" . $row[wr_id];
+        echo "<a href='$href'>" . cut_str($write[wr_subject], $subject_len) . "</a><br>";
+    }
+    ?></div>
+<div class="images"> <?
+    for ($i=0; $row = sql_fetch_array($myboard_result); $i++) {
+        $tmp_write_table = $g4[write_prefix] . $row[bo_table];
+        $href = "$g4[bbs_path]/board.php?bo_table=$row[bo_table]";
+        echo "<a href='$href'>" . cut_str($row[bo_subject], $subject_len) . "</a><br>";
+    }
+    ?></div>
+<div class="images"> <?
+    for ($i=0; $row = sql_fetch_array($singoed_result); $i++) {
+        $tmp_write_table = $g4[write_prefix] . $row[rc_bo_table];
+        $sql = " select * from $tmp_write_table where wr_id = '$row[rc_wr_id]' ";
+        $res = sql_fetch($sql);
+
+        $href = "$g4[bbs_path]/board.php?bo_table=$row[bo_table]&wr_id=$row[wr_id]";
+        echo "<a href='$href' target=_blank>" . cut_str($row[sg_reason], $subject_len) . "</a><br>";
+    }
+    ?></div>
+<div class="images"> <?
+    for ($i=0; $row = sql_fetch_array($singoed_result); $i++) {
+        $tmp_write_table = $g4[write_prefix] . $row[rc_bo_table];
+        $sql = " select * from $tmp_write_table where wr_id = '$row[rc_wr_id]' ";
+        $res = sql_fetch($sql);
+
+        $href = "$g4[bbs_path]/board.php?bo_table=$row[bo_table]&wr_id=$row[wr_id]";
+        echo "<a href='$href' target=_blank>" . cut_str($row[sg_reason], $subject_len) . "</a><br>";
+    }
+    ?></div>
+<div class="images"> <?
+    for ($i=0; $row = sql_fetch_array($recycle_result); $i++) {
+        $tmp_write_table = $g4[write_prefix] . $row[rc_bo_table];
+        $sql = " select * from $tmp_write_table where wr_id = '$row[rc_wr_id]' ";
+        $res = sql_fetch($sql);
+
+        $href = "$g4[bbs_path]/recycle_view.php?bo_table=$row[rc_bo_table]&wr_id=$row[rc_wr_id]&org_bo_table=$row[bo_table]";
+        echo "<a href='$href' target=_blank>" . cut_str($res[wr_subject], $subject_len) . "</a><br>";
+    }
+    ?></div>
+</div>
+
+
+<script type="text/javascript">
+<!--
+new tabView({menu:"tab", menuTag:"LI", callEvent:"mouseover", imageArea:"image_list", imageTag:"DIV"});
+
+
+function tabView(json){
+	
+	if(json.callEvent == "mouseover"){
+		e(json.menu).onmouseover = function(event){
+			var tabs = tn(e(json.menu), json.menuTag);
+			var evt = event || window.event;
+			var t = evt.target || evt.srcElement;
+			
+			for(n in tabs){
+				if(tabs[n] == t){
+					viewContent(n);
+					rollOver(t);
+					break;
+				}
+			}
+		}
+	};
+	
+
+	//내용 보이기
+	function viewContent(nIdx){
+		var els = tn(e(json.imageArea), json.imageTag);
+		if(els.length == 0) return;
+
+		for(n in els){
+			if(typeof els[n]=="object"){
+				if(n==nIdx){
+					els[n].style.display = "block";
+				}else{
+					els[n].style.display = "none";
+				}
+			}
+		}
+	}
+
+	//라벨 onmouseover 시 클래스 적용
+	function rollOver(obj){
+		//if(c.label == null) return;
+		//var els = c.label.getElementsByTagName(c.labelType);
+		var els = tn(e(json.menu), json.menuTag);
+		if(els.length==0) return;
+		
+		if(json.menuTag == "IMG"){
+			for(n in els){
+				if(typeof els[n] == "object"){
+					if(els[n] == obj){
+						els[n].src = els[n].getAttribute("oversrc");
+					}else{
+						els[n].src = els[n].getAttribute("outsrc");
+					}
+				}
+			}
+		}else{
+			for(n in els){
+				if(typeof els[n] == "object"){
+					if(els[n] == obj){
+						var ocss = els[n].className;
+						els[n].className = ocss+" "+els[n].getAttribute("overcss");
+					}else{
+						els[n].className = els[n].getAttribute("outcss");
+					}
+				}
+			}
+		}
+	}// e function rollOver(obj){
+}
+
+
+//객체 반환
+function e(id){
+	return document.getElementById(id);
+}
+
+//pa에 속한 태그들 반환
+function tn(pa, tagName){
+	return pa.getElementsByTagName(tagName);
+}
+//-->
+</script>

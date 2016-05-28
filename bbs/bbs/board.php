@@ -1,0 +1,1 @@
+<script>location.href='/bbs/board.php';</script>

@@ -1,0 +1,77 @@
+<?
+if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가 
+
+// 사용자 화면 우측과 하단을 담당하는 페이지입니다.
+// 우측, 하단 화면을 꾸미려면 이 파일을 수정합니다.
+?>
+
+</div><!-- 가운데 영역 div - content 끝 -->
+
+<!-- 오른쪽 컬럼 div - side 시작 -->
+<div class="aside">
+    <div>
+    <?
+    if (!$is_member) {
+        include_once("$g4[path]/lib/latest.lib.php");
+        echo latest_good('scrap', 'hotdeal', 6, 30);
+        include_once("$g4[path]/lib/latest.lib.php");
+        echo latest_good_metacoupon('scrap', 'metacoupon', 10, 25);
+    }
+
+    // 광고를 봐주셔야 합니다. ㅠ..ㅠ...
+    include_once("$g4[path]/adsense_aside.php");
+
+    // 회원일 때
+    if ($is_member){
+        include_once("$g4[path]/lib/whatson.lib.php");
+
+        $loading_msg = "AJAX Data Loading";
+
+        echo "<div id='my_whatson'>$loading_msg</div>";
+
+        include_once "$g4[path]/lib/latest.my.lib.php";
+        echo "<div id='my_post'>$loading_msg</div>";
+        echo "<div id='my_comment'>$loading_msg</div>";
+    }
+
+    // 광고를 봐주셔야 합니다. ㅠ..ㅠ...
+    include_once("$g4[path]/adsense_aside2.php");
+
+    // 없어질 부분
+    echo "<div id='my_response' style='height:260px'>$loading_msg</div>";
+    ?>
+    </div>
+</div><!-- 오른쪽 컬럼 div - side 끝 -->
+
+</div><!-- 중간부 div - container 끝 -->
+
+<!-- 페이지 하단부 footer -->
+<div id="footer">
+		<ul  class="footer-nav">
+  			<li><a href="<?=$g4[path]?>/">홈으로</a></li>
+	  		<li><a href="<?=$g4[path]?>/company/privacy.php?mnb=info&snb=privacy"><b>개인정보취급방침</b></a></li>
+  			<li><a href="<?=$g4[path]?>/company/service.php?mnb=info&snb=service">이용약관</a></li>
+        <li><a href="<?=$g4[path]?>/company/disclaimer.php?mnb=info&snb=disclaimer">책임한계와법적고지</a></li>
+        <li><a href="<?=$g4[path]?>/company/rejection.php?mnb=info&snb=rejection">이메일주소무단수집거부</a></li>
+		</ul>
+    <p class="info">
+        불당의 DiorCafe는 해외구매정보를 공유하는 커뮤니티 사이트이며, 사이트의 게시글 등에 대한 의무와 책임은 각 회원에 있습니다.
+    </p>
+    <p class="info2">
+        카톡: diorcafe/ 이메일: diorcafe.co.kr@gmail.com <br>
+		<? if (($mnb == "mart" || $mnb == "flea" ) && $is_member){ ?>
+        사업자등록번호: 214-88-95569/ 통신판매업신고번호: 2012-서울서초-0764호[<a href="http://ftc.go.kr/info/bizinfo/communicationList.jsp?searchKey=04&amp;searchVal=" style="color:#093" target="_blank">사업자등록정보확인</a>]<br>
+        우)137-876,서울시서초구반포대로14길54,에이동602호/ 전화: 070-7115-0010/ 주식회사불당카페/ 대표이사:강윤호/ 개인정보보호책임자:강윤호
+    <? } ?>
+    </p>
+
+    <p class="copyright">
+        Copyright &copy; <a href="http://www.diorcafe.co.kr" target="_blank">DiorCafe.co.kr</a>. All rights reserved.
+    </p>
+</div>
+
+</div><!-- 전체 div : wrap 끝 -->
+
+<?
+include_once("$g4[path]/tail.sub.php");
+?>

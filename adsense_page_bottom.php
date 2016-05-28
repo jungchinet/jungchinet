@@ -1,0 +1,1 @@
+<a href="http://huddak.net" target=new><img src="<?=$g4[path]?>/images/github_logo.jpg" align=absmiddle alt=""></a>

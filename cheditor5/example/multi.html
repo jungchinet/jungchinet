@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>CHEditor</title>
+<meta http-equiv="content-type" content="text/html; charset=euc-kr" />
+<!-- cheidtor.js 파일의 위치를 지정합니다. -->
+<script type="text/javascript" src="../cheditor.js"></script>
+</head>
+<body>
+<center>
+<h3>CHEditor Demo</h3>
+<script type="text/javascript">
+
+<!-- form 을 submit() 합니다. -->
+function doSubmit (theform)
+{
+    // ---------------------------------------------------------------------------------
+    // outputBodyHTML 메서드를 호출하면 TEXTAREA 'fm_post' 폼 값에
+    // 에디터에서 입력한 내용이 자동으로 입력됩니다.
+    //
+    // outputBodyHTML:  BODY 태그 안쪽 내용을 가져옵니다.
+    // outputHTML:      HTML 문서 모두를 가져옵니다.
+    // outputBodyText:  BODY 태그 안쪽의 HTML 태그를 제외한 텍스트만을 가져옵니다.
+    // inputLength:     입력한 텍스트 문자 수를 리턴합니다.
+    // contentsLength:  BODY 태그 안쪽의 HTML 태그를 포함한 모든 문자 수를 리턴합니다.
+    // contentsLengthAll: HTML 문서의 모든 문자 수를 리턴합니다.
+
+    alert(myeditor1.outputBodyHTML());
+    alert(myeditor2.outputBodyHTML());
+    return false;
+}
+</script>
+
+<form method="post" name="theform" onsubmit="return doSubmit(this)">
+
+<textarea id="fm_post1" name="fm_write"></textarea>
+
+<!-- 에디터를 화면에 출력합니다. -->
+<script type="text/javascript">
+var myeditor1 = new cheditor();             // 에디터 개체를 생성합니다.
+myeditor1.config.editorHeight = '150px';    // 에디터 세로폭입니다.
+myeditor1.config.editorWidth = '80%';       // 에디터 가로폭입니다.
+myeditor1.inputForm = 'fm_post1';           // textarea의 ID 이름입니다.
+myeditor1.run();                            // 에디터를 실행합니다.
+</script>
+
+<br/><br/>
+
+<textarea id="fm_post2" name="fm_write2"></textarea>
+<script type="text/javascript">
+var myeditor2 = new cheditor();             // 에디터 개체를 생성합니다.
+myeditor2.config.editorHeight = '150px';    // 에디터 세로폭입니다.
+myeditor2.config.editorWidth = '80%';       // 에디터 가로폭입니다.
+myeditor2.inputForm = 'fm_post2';           // textarea의 ID 이름입니다.
+myeditor2.run();                            // 에디터를 실행합니다.
+</script>
+
+<br/><br/>
+
+<input type="submit" value="글 가져오기" />
+</form>
+
+<p>
+    <font face="verdana" size="1" color="#666666">
+        Copyright ⓒ 1997-2012 by <b>CHCODE.</b> All right reserved.
+    </font>
+</p>
+</center>
+</body>
+</html>

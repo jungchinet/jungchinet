@@ -1,0 +1,123 @@
+O:9:"MagpieRSS":23:{s:6:"parser";i:0;s:12:"current_item";a:0:{}s:5:"items";a:10:{i:0;a:14:{s:5:"title";s:61:"특정 명령어를 일정 시간마다 반복실행시키기";s:4:"link";s:204:"http://www.kalcapt.net/blog/%ed%8a%b9%ec%a0%95-%eb%aa%85%eb%a0%b9%ec%96%b4%eb%a5%bc-%ec%9d%bc%ec%a0%95-%ec%8b%9c%ea%b0%84%eb%a7%88%eb%8b%a4-%eb%b0%98%eb%b3%b5%ec%8b%a4%ed%96%89%ec%8b%9c%ed%82%a4%ea%b8%b0/";s:8:"comments";s:213:"http://www.kalcapt.net/blog/%ed%8a%b9%ec%a0%95-%eb%aa%85%eb%a0%b9%ec%96%b4%eb%a5%bc-%ec%9d%bc%ec%a0%95-%ec%8b%9c%ea%b0%84%eb%a7%88%eb%8b%a4-%eb%b0%98%eb%b3%b5%ec%8b%a4%ed%96%89%ec%8b%9c%ed%82%a4%ea%b8%b0/#comments";s:7:"pubdate";s:31:"Mon, 22 Jun 2015 11:13:38 +0000";s:2:"dc";a:1:{s:7:"creator";s:7:"kalcapt";}s:8:"category";s:5:"Linux";s:4:"guid";s:34:"http://www.kalcapt.net/blog/?p=179";s:11:"description";s:344:"watch -n 원하는 초(0.1초 등 가능) &#8216;명령어&#8217; 이렇게 실행을 하면 해당 시간을 간격으로 동일 명령어가 실행된다&#8230; 예를들어 1초마다 시간을 한번씩 보고싶다 하면 watch -n 1 &#8216;date&#8217;와 같이 입력하면 매초 현재의 시간이 콘솔에 표시된다. &#160; &#160;";s:7:"content";a:1:{s:7:"encoded";s:387:"<p>watch -n 원하는 초(0.1초 등 가능) &#8216;명령어&#8217;</p>
+<p>이렇게 실행을 하면 해당 시간을 간격으로 동일 명령어가 실행된다&#8230;</p>
+<p>예를들어 1초마다 시간을 한번씩 보고싶다 하면</p>
+<p>watch -n 1 &#8216;date&#8217;와 같이 입력하면 매초 현재의 시간이 콘솔에 표시된다.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+";}s:3:"wfw";a:1:{s:10:"commentrss";s:209:"http://www.kalcapt.net/blog/%ed%8a%b9%ec%a0%95-%eb%aa%85%eb%a0%b9%ec%96%b4%eb%a5%bc-%ec%9d%bc%ec%a0%95-%ec%8b%9c%ea%b0%84%eb%a7%88%eb%8b%a4-%eb%b0%98%eb%b3%b5%ec%8b%a4%ed%96%89%ec%8b%9c%ed%82%a4%ea%b8%b0/feed/";}s:5:"slash";a:1:{s:8:"comments";s:1:"0";}s:7:"summary";s:344:"watch -n 원하는 초(0.1초 등 가능) &#8216;명령어&#8217; 이렇게 실행을 하면 해당 시간을 간격으로 동일 명령어가 실행된다&#8230; 예를들어 1초마다 시간을 한번씩 보고싶다 하면 watch -n 1 &#8216;date&#8217;와 같이 입력하면 매초 현재의 시간이 콘솔에 표시된다. &#160; &#160;";s:12:"atom_content";s:387:"<p>watch -n 원하는 초(0.1초 등 가능) &#8216;명령어&#8217;</p>
+<p>이렇게 실행을 하면 해당 시간을 간격으로 동일 명령어가 실행된다&#8230;</p>
+<p>예를들어 1초마다 시간을 한번씩 보고싶다 하면</p>
+<p>watch -n 1 &#8216;date&#8217;와 같이 입력하면 매초 현재의 시간이 콘솔에 표시된다.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+";s:14:"date_timestamp";i:1434971618;}i:1;a:14:{s:5:"title";s:39:"자동차 보험료에 대한 고찰…";s:4:"link";s:131:"http://www.kalcapt.net/blog/%ec%9e%90%eb%8f%99%ec%b0%a8-%eb%b3%b4%ed%97%98%eb%a3%8c%ec%97%90-%eb%8c%80%ed%95%9c-%ea%b3%a0%ec%b0%b0/";s:8:"comments";s:140:"http://www.kalcapt.net/blog/%ec%9e%90%eb%8f%99%ec%b0%a8-%eb%b3%b4%ed%97%98%eb%a3%8c%ec%97%90-%eb%8c%80%ed%95%9c-%ea%b3%a0%ec%b0%b0/#comments";s:7:"pubdate";s:31:"Tue, 16 Jun 2015 14:51:17 +0000";s:2:"dc";a:1:{s:7:"creator";s:7:"kalcapt";}s:8:"category";s:76:"About KarInsuranceAXALIGMG보험료싼 보험자동차 보험자차하이카";s:4:"guid";s:34:"http://www.kalcapt.net/blog/?p=174";s:11:"description";s:609:"6월 중순이 자동차 보험 만기일이어서 기존에 이용하던 AXA다이렉트에 견적 요청을 했다. 자차를 제외하니 80만원 중반대.. 자차를 포함하니 100만원 초반대가 나오네..? 그래서 그런가보다 하고 있었는데.. 매일같이 전화가 온다&#8230; 그래서 만기일 전에 직접 고객센터에 연락을 해서 연장을 하겠다고 연락주지 말라고 그렇~~~게 메모 부탁을 해도 끈질기게 전화가 온다&#8230; 그래서 뚜껑 열리기 직전에.. 다른 보험사들의 견적을 알아보기 시작&#8230; 어라? [&#8230;]";s:7:"content";a:1:{s:7:"encoded";s:2149:"<p>6월 중순이 자동차 보험 만기일이어서 기존에 이용하던 AXA다이렉트에 견적 요청을 했다.</p>
+<p>자차를 제외하니 80만원 중반대.. 자차를 포함하니 100만원 초반대가 나오네..?</p>
+<p>그래서 그런가보다 하고 있었는데.. 매일같이 전화가 온다&#8230;</p>
+<p>그래서 만기일 전에 직접 고객센터에 연락을 해서 연장을 하겠다고 연락주지 말라고 그렇~~~게 메모 부탁을 해도</p>
+<p>끈질기게 전화가 온다&#8230; 그래서 뚜껑 열리기 직전에..</p>
+<p>다른 보험사들의 견적을 알아보기 시작&#8230;</p>
+<p>어라? 나는 AXA가 젤루 싼줄로만 알고 있었는데&#8230; 그건 내 첫 보험료 납입이라 그랬나보다&#8230;</p>
+<p>삼성 하이카다이렉트와 LIG가 각각 자차 미포함 60중후반, 포함 80중후반!!</p>
+<p>악사가 이렇게 비싼거였다니&#8230; 이럴줄 알았으면 작년에 갈아탔어야하는데..ㅠ</p>
+<p>암튼 최종적으로 MG다이렉트와 계약을 했다.</p>
+<p>자차 미포함 50만원 중후반대&#8230; 자차포함 69만원 후반대&#8230;</p>
+<p>자차는 빼고 옵션 조금 더 넣고 59만 얼마네 계약!</p>
+<p>새마을금고가 보험업계까지 뛰어들었을줄이야&#8230;</p>
+<p>기존에 악사 이용하면서 스피드메이트를 이용했는데.. MG도 스피드메이트와 계약이 되어있어서 + 젤 저렴한 가격에 끌려서 결정하게 되었다.. 나이와 사고이력, 보험 경력등에 따라 달라지겠지만&#8230; 나도 빨리 할인할인! 받고싶다 ㅠ</p>
+<p>아쉬운 점은 쿠폰북? 이런거 없다..ㅎ 싸면 싼대로.. 비싸면 비싼대로 이유가 있는거 같지만&#8230;</p>
+<p>싼게 좋다 ㅎㅎ (MG는 1회에 한해서 스피드메이트 엔진오일 무료교환 쿠폰을 고객센터에 연락하면 보내준다 하니 참고&#8230;)</p>
+<p>&nbsp;</p>
+<p>뭐든 발품 팔아서 손해볼 건 없다..</p>
+<p>단, 뭔가를 지르고 난 다음에는 그 발품을 중지할 것.</p>
+<p>내가 구입한 것보다 더 싼 가격 발견하면 배아프니까.</p>
+";}s:3:"wfw";a:1:{s:10:"commentrss";s:136:"http://www.kalcapt.net/blog/%ec%9e%90%eb%8f%99%ec%b0%a8-%eb%b3%b4%ed%97%98%eb%a3%8c%ec%97%90-%eb%8c%80%ed%95%9c-%ea%b3%a0%ec%b0%b0/feed/";}s:5:"slash";a:1:{s:8:"comments";s:1:"0";}s:7:"summary";s:609:"6월 중순이 자동차 보험 만기일이어서 기존에 이용하던 AXA다이렉트에 견적 요청을 했다. 자차를 제외하니 80만원 중반대.. 자차를 포함하니 100만원 초반대가 나오네..? 그래서 그런가보다 하고 있었는데.. 매일같이 전화가 온다&#8230; 그래서 만기일 전에 직접 고객센터에 연락을 해서 연장을 하겠다고 연락주지 말라고 그렇~~~게 메모 부탁을 해도 끈질기게 전화가 온다&#8230; 그래서 뚜껑 열리기 직전에.. 다른 보험사들의 견적을 알아보기 시작&#8230; 어라? [&#8230;]";s:12:"atom_content";s:2149:"<p>6월 중순이 자동차 보험 만기일이어서 기존에 이용하던 AXA다이렉트에 견적 요청을 했다.</p>
+<p>자차를 제외하니 80만원 중반대.. 자차를 포함하니 100만원 초반대가 나오네..?</p>
+<p>그래서 그런가보다 하고 있었는데.. 매일같이 전화가 온다&#8230;</p>
+<p>그래서 만기일 전에 직접 고객센터에 연락을 해서 연장을 하겠다고 연락주지 말라고 그렇~~~게 메모 부탁을 해도</p>
+<p>끈질기게 전화가 온다&#8230; 그래서 뚜껑 열리기 직전에..</p>
+<p>다른 보험사들의 견적을 알아보기 시작&#8230;</p>
+<p>어라? 나는 AXA가 젤루 싼줄로만 알고 있었는데&#8230; 그건 내 첫 보험료 납입이라 그랬나보다&#8230;</p>
+<p>삼성 하이카다이렉트와 LIG가 각각 자차 미포함 60중후반, 포함 80중후반!!</p>
+<p>악사가 이렇게 비싼거였다니&#8230; 이럴줄 알았으면 작년에 갈아탔어야하는데..ㅠ</p>
+<p>암튼 최종적으로 MG다이렉트와 계약을 했다.</p>
+<p>자차 미포함 50만원 중후반대&#8230; 자차포함 69만원 후반대&#8230;</p>
+<p>자차는 빼고 옵션 조금 더 넣고 59만 얼마네 계약!</p>
+<p>새마을금고가 보험업계까지 뛰어들었을줄이야&#8230;</p>
+<p>기존에 악사 이용하면서 스피드메이트를 이용했는데.. MG도 스피드메이트와 계약이 되어있어서 + 젤 저렴한 가격에 끌려서 결정하게 되었다.. 나이와 사고이력, 보험 경력등에 따라 달라지겠지만&#8230; 나도 빨리 할인할인! 받고싶다 ㅠ</p>
+<p>아쉬운 점은 쿠폰북? 이런거 없다..ㅎ 싸면 싼대로.. 비싸면 비싼대로 이유가 있는거 같지만&#8230;</p>
+<p>싼게 좋다 ㅎㅎ (MG는 1회에 한해서 스피드메이트 엔진오일 무료교환 쿠폰을 고객센터에 연락하면 보내준다 하니 참고&#8230;)</p>
+<p>&nbsp;</p>
+<p>뭐든 발품 팔아서 손해볼 건 없다..</p>
+<p>단, 뭔가를 지르고 난 다음에는 그 발품을 중지할 것.</p>
+<p>내가 구입한 것보다 더 싼 가격 발견하면 배아프니까.</p>
+";s:14:"date_timestamp";i:1434466277;}i:2;a:14:{s:5:"title";s:51:"Oracle 서버 IP 변경 시 해줘야 할 것들…";s:4:"link";s:143:"http://www.kalcapt.net/blog/oracle-%ec%84%9c%eb%b2%84-ip-%eb%b3%80%ea%b2%bd-%ec%8b%9c-%ed%95%b4%ec%a4%98%ec%95%bc-%ed%95%a0-%ea%b2%83%eb%93%a4/";s:8:"comments";s:152:"http://www.kalcapt.net/blog/oracle-%ec%84%9c%eb%b2%84-ip-%eb%b3%80%ea%b2%bd-%ec%8b%9c-%ed%95%b4%ec%a4%98%ec%95%bc-%ed%95%a0-%ea%b2%83%eb%93%a4/#comments";s:7:"pubdate";s:31:"Sun, 31 May 2015 00:16:11 +0000";s:2:"dc";a:1:{s:7:"creator";s:7:"kalcapt";}s:8:"category";s:8:"ITOracle";s:4:"guid";s:34:"http://www.kalcapt.net/blog/?p=168";s:11:"description";s:422:"&#8211; 오라클 설치 경로로 이동 &#8211; listener.ora 파일의 IP 관련 부분 수정 &#8211; tnsnames.ora 파일의 IP 관련 부분 수정 &#8211; 제어판 > 관리도구 > 서비스 > 오라클 리스너 재시작&#8230;(이라고는 하는데 리스너만 재시작해서는 적용이 안되는 듯&#8230; 서버 재부팅을 해주면 잘 변경됌!) 출처는 http://expert0226.tistory.com/227 이곳!!^^";s:7:"content";a:1:{s:7:"encoded";s:458:"<p>&#8211; 오라클 설치 경로로 이동</p>
+<p>&#8211; listener.ora 파일의 IP 관련 부분 수정</p>
+<p>&#8211; tnsnames.ora 파일의 IP 관련 부분 수정</p>
+<p>&#8211; 제어판 > 관리도구 > 서비스 > 오라클 리스너 재시작&#8230;(이라고는 하는데 리스너만 재시작해서는 적용이 안되는 듯&#8230; 서버 재부팅을 해주면 잘 변경됌!)</p>
+<p>출처는 http://expert0226.tistory.com/227 이곳!!^^</p>
+";}s:3:"wfw";a:1:{s:10:"commentrss";s:148:"http://www.kalcapt.net/blog/oracle-%ec%84%9c%eb%b2%84-ip-%eb%b3%80%ea%b2%bd-%ec%8b%9c-%ed%95%b4%ec%a4%98%ec%95%bc-%ed%95%a0-%ea%b2%83%eb%93%a4/feed/";}s:5:"slash";a:1:{s:8:"comments";s:1:"0";}s:7:"summary";s:422:"&#8211; 오라클 설치 경로로 이동 &#8211; listener.ora 파일의 IP 관련 부분 수정 &#8211; tnsnames.ora 파일의 IP 관련 부분 수정 &#8211; 제어판 > 관리도구 > 서비스 > 오라클 리스너 재시작&#8230;(이라고는 하는데 리스너만 재시작해서는 적용이 안되는 듯&#8230; 서버 재부팅을 해주면 잘 변경됌!) 출처는 http://expert0226.tistory.com/227 이곳!!^^";s:12:"atom_content";s:458:"<p>&#8211; 오라클 설치 경로로 이동</p>
+<p>&#8211; listener.ora 파일의 IP 관련 부분 수정</p>
+<p>&#8211; tnsnames.ora 파일의 IP 관련 부분 수정</p>
+<p>&#8211; 제어판 > 관리도구 > 서비스 > 오라클 리스너 재시작&#8230;(이라고는 하는데 리스너만 재시작해서는 적용이 안되는 듯&#8230; 서버 재부팅을 해주면 잘 변경됌!)</p>
+<p>출처는 http://expert0226.tistory.com/227 이곳!!^^</p>
+";s:14:"date_timestamp";i:1433031371;}i:3;a:14:{s:5:"title";s:61:"직관적인 사진이론… 조리개, 셔터 스피드, ISO";s:4:"link";s:181:"http://www.kalcapt.net/blog/%ec%a7%81%ea%b4%80%ec%a0%81%ec%9d%b8-%ec%82%ac%ec%a7%84%ec%9d%b4%eb%a1%a0-%ec%a1%b0%eb%a6%ac%ea%b0%9c-%ec%85%94%ed%84%b0-%ec%8a%a4%ed%94%bc%eb%93%9c-iso/";s:8:"comments";s:190:"http://www.kalcapt.net/blog/%ec%a7%81%ea%b4%80%ec%a0%81%ec%9d%b8-%ec%82%ac%ec%a7%84%ec%9d%b4%eb%a1%a0-%ec%a1%b0%eb%a6%ac%ea%b0%9c-%ec%85%94%ed%84%b0-%ec%8a%a4%ed%94%bc%eb%93%9c-iso/#comments";s:7:"pubdate";s:31:"Sat, 30 May 2015 23:53:31 +0000";s:2:"dc";a:1:{s:7:"creator";s:7:"kalcapt";}s:8:"category";s:14:"BasicsFictures";s:4:"guid";s:34:"http://www.kalcapt.net/blog/?p=163";s:11:"description";s:192:"아주 그냥 딱!! 직관적으로 보이는 사진이론&#8230; 초보자들이 이걸 보면 보다 쉽게 이해가 가능하겠군요&#8230;ㅎ 백날 말로 떠드는 것 보다&#8230;^^";s:7:"content";a:1:{s:7:"encoded";s:449:"<p>아주 그냥 딱!! 직관적으로 보이는 사진이론&#8230;<br />
+초보자들이 이걸 보면 보다 쉽게 이해가 가능하겠군요&#8230;ㅎ<br />
+백날 말로 떠드는 것 보다&#8230;^^</p>
+<p><a href="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/fsi.jpg"><img src="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/fsi.jpg" alt="fsi" width="720" height="432" class="alignnone size-full wp-image-164" /></a></p>
+";}s:3:"wfw";a:1:{s:10:"commentrss";s:186:"http://www.kalcapt.net/blog/%ec%a7%81%ea%b4%80%ec%a0%81%ec%9d%b8-%ec%82%ac%ec%a7%84%ec%9d%b4%eb%a1%a0-%ec%a1%b0%eb%a6%ac%ea%b0%9c-%ec%85%94%ed%84%b0-%ec%8a%a4%ed%94%bc%eb%93%9c-iso/feed/";}s:5:"slash";a:1:{s:8:"comments";s:1:"0";}s:7:"summary";s:192:"아주 그냥 딱!! 직관적으로 보이는 사진이론&#8230; 초보자들이 이걸 보면 보다 쉽게 이해가 가능하겠군요&#8230;ㅎ 백날 말로 떠드는 것 보다&#8230;^^";s:12:"atom_content";s:449:"<p>아주 그냥 딱!! 직관적으로 보이는 사진이론&#8230;<br />
+초보자들이 이걸 보면 보다 쉽게 이해가 가능하겠군요&#8230;ㅎ<br />
+백날 말로 떠드는 것 보다&#8230;^^</p>
+<p><a href="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/fsi.jpg"><img src="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/fsi.jpg" alt="fsi" width="720" height="432" class="alignnone size-full wp-image-164" /></a></p>
+";s:14:"date_timestamp";i:1433030011;}i:4;a:12:{s:5:"title";s:35:"2015. 05 최신 가요 연속듣기";s:4:"link";s:111:"http://www.kalcapt.net/blog/2015-05-%ec%b5%9c%ec%8b%a0-%ea%b0%80%ec%9a%94-%ec%97%b0%ec%86%8d%eb%93%a3%ea%b8%b0/";s:8:"comments";s:120:"http://www.kalcapt.net/blog/2015-05-%ec%b5%9c%ec%8b%a0-%ea%b0%80%ec%9a%94-%ec%97%b0%ec%86%8d%eb%93%a3%ea%b8%b0/#comments";s:7:"pubdate";s:31:"Sat, 30 May 2015 00:19:09 +0000";s:2:"dc";a:1:{s:7:"creator";s:7:"kalcapt";}s:8:"category";s:5:"K-POP";s:4:"guid";s:34:"http://www.kalcapt.net/blog/?p=160";s:7:"content";a:1:{s:7:"encoded";s:188:"<p><iframe src="https://www.youtube.com/embed/Ibb5RhoKfzE?list=PLitPkMJ97G7UywETpGONjEAe8Mz7-yOo1" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+";}s:3:"wfw";a:1:{s:10:"commentrss";s:116:"http://www.kalcapt.net/blog/2015-05-%ec%b5%9c%ec%8b%a0-%ea%b0%80%ec%9a%94-%ec%97%b0%ec%86%8d%eb%93%a3%ea%b8%b0/feed/";}s:5:"slash";a:1:{s:8:"comments";s:1:"0";}s:12:"atom_content";s:188:"<p><iframe src="https://www.youtube.com/embed/Ibb5RhoKfzE?list=PLitPkMJ97G7UywETpGONjEAe8Mz7-yOo1" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+";s:14:"date_timestamp";i:1432945149;}i:5;a:14:{s:5:"title";s:64:"웹(플래시)기반의 이미지 에디터 / 포토샵같은…";s:4:"link";s:194:"http://www.kalcapt.net/blog/%ec%9b%b9%ed%94%8c%eb%9e%98%ec%8b%9c%ea%b8%b0%eb%b0%98%ec%9d%98-%ec%9d%b4%eb%af%b8%ec%a7%80-%ec%97%90%eb%94%94%ed%84%b0-%ed%8f%ac%ed%86%a0%ec%83%b5%ea%b0%99%ec%9d%80/";s:8:"comments";s:203:"http://www.kalcapt.net/blog/%ec%9b%b9%ed%94%8c%eb%9e%98%ec%8b%9c%ea%b8%b0%eb%b0%98%ec%9d%98-%ec%9d%b4%eb%af%b8%ec%a7%80-%ec%97%90%eb%94%94%ed%84%b0-%ed%8f%ac%ed%86%a0%ec%83%b5%ea%b0%99%ec%9d%80/#comments";s:7:"pubdate";s:31:"Sat, 30 May 2015 00:15:07 +0000";s:2:"dc";a:1:{s:7:"creator";s:7:"kalcapt";}s:8:"category";s:8:"EditorIT";s:4:"guid";s:34:"http://www.kalcapt.net/blog/?p=155";s:11:"description";s:179:"http://apps.pixlr.com/editor/ 위의 사이트에 접속하면 별도의 프로그램 설치 없이 이미지 편집이 가능하다.. 정말 요긴하게 쓸 수 있다&#8230;^^;";s:7:"content";a:1:{s:7:"encoded";s:616:"<p><a href="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/스크린샷-2015-05-30-오전-12.15.33.png"><img class="alignnone size-large wp-image-156" src="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/스크린샷-2015-05-30-오전-12.15.33-1024x593.png" alt="스크린샷 2015-05-30 오전 12.15.33" width="625" height="362" /></a></p>
+<p><a href="http://apps.pixlr.com/editor/" target="_blank">http://apps.pixlr.com/editor/</a></p>
+<p>위의 사이트에 접속하면 별도의 프로그램 설치 없이 이미지 편집이 가능하다..</p>
+<p>정말 요긴하게 쓸 수 있다&#8230;^^;</p>
+";}s:3:"wfw";a:1:{s:10:"commentrss";s:199:"http://www.kalcapt.net/blog/%ec%9b%b9%ed%94%8c%eb%9e%98%ec%8b%9c%ea%b8%b0%eb%b0%98%ec%9d%98-%ec%9d%b4%eb%af%b8%ec%a7%80-%ec%97%90%eb%94%94%ed%84%b0-%ed%8f%ac%ed%86%a0%ec%83%b5%ea%b0%99%ec%9d%80/feed/";}s:5:"slash";a:1:{s:8:"comments";s:1:"0";}s:7:"summary";s:179:"http://apps.pixlr.com/editor/ 위의 사이트에 접속하면 별도의 프로그램 설치 없이 이미지 편집이 가능하다.. 정말 요긴하게 쓸 수 있다&#8230;^^;";s:12:"atom_content";s:616:"<p><a href="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/스크린샷-2015-05-30-오전-12.15.33.png"><img class="alignnone size-large wp-image-156" src="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/스크린샷-2015-05-30-오전-12.15.33-1024x593.png" alt="스크린샷 2015-05-30 오전 12.15.33" width="625" height="362" /></a></p>
+<p><a href="http://apps.pixlr.com/editor/" target="_blank">http://apps.pixlr.com/editor/</a></p>
+<p>위의 사이트에 접속하면 별도의 프로그램 설치 없이 이미지 편집이 가능하다..</p>
+<p>정말 요긴하게 쓸 수 있다&#8230;^^;</p>
+";s:14:"date_timestamp";i:1432944907;}i:6;a:14:{s:5:"title";s:7:"Lens…";s:4:"link";s:33:"http://www.kalcapt.net/blog/lens/";s:8:"comments";s:42:"http://www.kalcapt.net/blog/lens/#comments";s:7:"pubdate";s:31:"Fri, 29 May 2015 23:18:34 +0000";s:2:"dc";a:1:{s:7:"creator";s:7:"kalcapt";}s:8:"category";s:9:"미분류";s:4:"guid";s:34:"http://www.kalcapt.net/blog/?p=149";s:11:"description";s:180:"&#160; 렌즈의 결합부는 빛을 받으면 항상 예쁜 빛으로 빛이 난다&#8230;. 멀티코팅 때문이라고 하던데&#8230; 자세한 것은 모르겠지만&#8230;^^";s:7:"content";a:1:{s:7:"encoded";s:621:"<p><a href="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/lens2.jpg"><img class="alignnone size-large wp-image-151" src="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/lens1-1024x683.jpg" alt="lens1" width="625" height="417" /><img class="alignnone size-large wp-image-150" src="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/lens2-1024x683.jpg" alt="lens2" width="625" height="417" /></a></p>
+<p>&nbsp;</p>
+<p>렌즈의 결합부는 빛을 받으면 항상 예쁜 빛으로 빛이 난다&#8230;.</p>
+<p>멀티코팅 때문이라고 하던데&#8230; 자세한 것은 모르겠지만&#8230;^^</p>
+";}s:3:"wfw";a:1:{s:10:"commentrss";s:38:"http://www.kalcapt.net/blog/lens/feed/";}s:5:"slash";a:1:{s:8:"comments";s:1:"0";}s:7:"summary";s:180:"&#160; 렌즈의 결합부는 빛을 받으면 항상 예쁜 빛으로 빛이 난다&#8230;. 멀티코팅 때문이라고 하던데&#8230; 자세한 것은 모르겠지만&#8230;^^";s:12:"atom_content";s:621:"<p><a href="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/lens2.jpg"><img class="alignnone size-large wp-image-151" src="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/lens1-1024x683.jpg" alt="lens1" width="625" height="417" /><img class="alignnone size-large wp-image-150" src="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/lens2-1024x683.jpg" alt="lens2" width="625" height="417" /></a></p>
+<p>&nbsp;</p>
+<p>렌즈의 결합부는 빛을 받으면 항상 예쁜 빛으로 빛이 난다&#8230;.</p>
+<p>멀티코팅 때문이라고 하던데&#8230; 자세한 것은 모르겠지만&#8230;^^</p>
+";s:14:"date_timestamp";i:1432941514;}i:7;a:14:{s:5:"title";s:16:"야간 라운딩";s:4:"link";s:75:"http://www.kalcapt.net/blog/%ec%95%bc%ea%b0%84-%eb%9d%bc%ec%9a%b4%eb%94%a9/";s:8:"comments";s:84:"http://www.kalcapt.net/blog/%ec%95%bc%ea%b0%84-%eb%9d%bc%ec%9a%b4%eb%94%a9/#comments";s:7:"pubdate";s:31:"Mon, 25 May 2015 08:52:18 +0000";s:2:"dc";a:1:{s:7:"creator";s:7:"kalcapt";}s:8:"category";s:9:"미분류";s:4:"guid";s:34:"http://www.kalcapt.net/blog/?p=146";s:11:"description";s:360:"날씨가 많이 풀리고.. 골프의 계절이 다가옴에 따라 야간에도 라운딩을 진행합니다. 해가 서산으로 뉘엿뉘엿 기울무렵.. 조명탑에 조명이 켜지고&#8230; 그 밝은 불빛을 벗삼아 라운딩을 즐기는 골퍼들이 보이네요.. 그나저나 저는 언제쯤 골프를 배워볼 수 있을까요 하하..^^;";s:7:"content";a:1:{s:7:"encoded";s:836:"<div class="board-view-con view-content"><a href="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/green1.jpg"><img class="alignnone size-large wp-image-147" src="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/green1-1024x596.jpg" alt="green1" width="625" height="364" /></a></div>
+<div class="board-view-con view-content"></div>
+<div class="board-view-con view-content">날씨가 많이 풀리고..</p>
+<div>골프의 계절이 다가옴에 따라 야간에도 라운딩을 진행합니다.</div>
+<div></div>
+<div>해가 서산으로 뉘엿뉘엿 기울무렵..</div>
+<div>조명탑에 조명이 켜지고&#8230;</div>
+<div>그 밝은 불빛을 벗삼아 라운딩을 즐기는 골퍼들이 보이네요..</div>
+<div></div>
+<div>그나저나 저는 언제쯤 골프를 배워볼 수 있을까요 하하..^^;</div>
+</div>
+";}s:3:"wfw";a:1:{s:10:"commentrss";s:80:"http://www.kalcapt.net/blog/%ec%95%bc%ea%b0%84-%eb%9d%bc%ec%9a%b4%eb%94%a9/feed/";}s:5:"slash";a:1:{s:8:"comments";s:1:"0";}s:7:"summary";s:360:"날씨가 많이 풀리고.. 골프의 계절이 다가옴에 따라 야간에도 라운딩을 진행합니다. 해가 서산으로 뉘엿뉘엿 기울무렵.. 조명탑에 조명이 켜지고&#8230; 그 밝은 불빛을 벗삼아 라운딩을 즐기는 골퍼들이 보이네요.. 그나저나 저는 언제쯤 골프를 배워볼 수 있을까요 하하..^^;";s:12:"atom_content";s:836:"<div class="board-view-con view-content"><a href="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/green1.jpg"><img class="alignnone size-large wp-image-147" src="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/green1-1024x596.jpg" alt="green1" width="625" height="364" /></a></div>
+<div class="board-view-con view-content"></div>
+<div class="board-view-con view-content">날씨가 많이 풀리고..</p>
+<div>골프의 계절이 다가옴에 따라 야간에도 라운딩을 진행합니다.</div>
+<div></div>
+<div>해가 서산으로 뉘엿뉘엿 기울무렵..</div>
+<div>조명탑에 조명이 켜지고&#8230;</div>
+<div>그 밝은 불빛을 벗삼아 라운딩을 즐기는 골퍼들이 보이네요..</div>
+<div></div>
+<div>그나저나 저는 언제쯤 골프를 배워볼 수 있을까요 하하..^^;</div>
+</div>
+";s:14:"date_timestamp";i:1432543938;}i:8;a:14:{s:5:"title";s:12:"골목에서";s:4:"link";s:65:"http://www.kalcapt.net/blog/%ea%b3%a8%eb%aa%a9%ec%97%90%ec%84%9c/";s:8:"comments";s:74:"http://www.kalcapt.net/blog/%ea%b3%a8%eb%aa%a9%ec%97%90%ec%84%9c/#comments";s:7:"pubdate";s:31:"Sun, 24 May 2015 03:46:33 +0000";s:2:"dc";a:1:{s:7:"creator";s:7:"kalcapt";}s:8:"category";s:9:"미분류";s:4:"guid";s:34:"http://www.kalcapt.net/blog/?p=143";s:11:"description";s:29:"정겨운 시골의 골목길";s:7:"content";a:1:{s:7:"encoded";s:330:"<p style="text-align: center;">정겨운 시골의 골목길</p>
+<p><a href="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/damb1.jpg"><img class="alignnone size-large wp-image-144 aligncenter" src="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/damb1-1024x683.jpg" alt="damb1" width="625" height="417" /></a></p>
+";}s:3:"wfw";a:1:{s:10:"commentrss";s:70:"http://www.kalcapt.net/blog/%ea%b3%a8%eb%aa%a9%ec%97%90%ec%84%9c/feed/";}s:5:"slash";a:1:{s:8:"comments";s:1:"0";}s:7:"summary";s:29:"정겨운 시골의 골목길";s:12:"atom_content";s:330:"<p style="text-align: center;">정겨운 시골의 골목길</p>
+<p><a href="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/damb1.jpg"><img class="alignnone size-large wp-image-144 aligncenter" src="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/damb1-1024x683.jpg" alt="damb1" width="625" height="417" /></a></p>
+";s:14:"date_timestamp";i:1432439193;}i:9;a:14:{s:5:"title";s:6:"터널";s:4:"link";s:47:"http://www.kalcapt.net/blog/%ed%84%b0%eb%84%90/";s:8:"comments";s:56:"http://www.kalcapt.net/blog/%ed%84%b0%eb%84%90/#comments";s:7:"pubdate";s:31:"Sun, 24 May 2015 03:45:29 +0000";s:2:"dc";a:1:{s:7:"creator";s:7:"kalcapt";}s:8:"category";s:9:"미분류";s:4:"guid";s:34:"http://www.kalcapt.net/blog/?p=140";s:11:"description";s:107:"한적한 터널&#8230; 끝없이 이어지는(실제로는 끝이 있는) 터널의 한복판에서&#8230;";s:7:"content";a:1:{s:7:"encoded";s:449:"<p style="text-align: center;">한적한 터널&#8230;</p>
+<p style="text-align: center;">끝없이 이어지는(실제로는 끝이 있는) 터널의 한복판에서&#8230;</p>
+<p><a href="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/tunnel1.jpg"><img class="alignnone size-large wp-image-141 aligncenter" src="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/tunnel1-1024x683.jpg" alt="tunnel1" width="625" height="417" /></a></p>
+";}s:3:"wfw";a:1:{s:10:"commentrss";s:52:"http://www.kalcapt.net/blog/%ed%84%b0%eb%84%90/feed/";}s:5:"slash";a:1:{s:8:"comments";s:1:"0";}s:7:"summary";s:107:"한적한 터널&#8230; 끝없이 이어지는(실제로는 끝이 있는) 터널의 한복판에서&#8230;";s:12:"atom_content";s:449:"<p style="text-align: center;">한적한 터널&#8230;</p>
+<p style="text-align: center;">끝없이 이어지는(실제로는 끝이 있는) 터널의 한복판에서&#8230;</p>
+<p><a href="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/tunnel1.jpg"><img class="alignnone size-large wp-image-141 aligncenter" src="http://www.kalcapt.net/blog/wp-content/uploads/2015/05/tunnel1-1024x683.jpg" alt="tunnel1" width="625" height="417" /></a></p>
+";s:14:"date_timestamp";i:1432439129;}}s:7:"channel";a:8:{s:5:"title";s:12:"Anythings...";s:4:"link";s:27:"http://www.kalcapt.net/blog";s:11:"description";s:64:"IT, WEB, Server, Musics, Computer, Musical Instruments, Anything";s:13:"lastbuilddate";s:31:"Mon, 22 Jun 2015 11:14:10 +0000";s:8:"language";s:5:"ko-KR";s:2:"sy";a:2:{s:12:"updateperiod";s:6:"hourly";s:15:"updatefrequency";s:1:"1";}s:9:"generator";s:29:"http://wordpress.org/?v=4.2.2";s:7:"tagline";s:64:"IT, WEB, Server, Musics, Computer, Musical Instruments, Anything";}s:9:"textinput";a:0:{}s:5:"image";a:0:{}s:9:"feed_type";s:3:"RSS";s:12:"feed_version";s:3:"2.0";s:8:"encoding";s:5:"UTF-8";s:16:"_source_encoding";s:0:"";s:5:"ERROR";s:0:"";s:7:"WARNING";s:0:"";s:19:"_CONTENT_CONSTRUCTS";a:6:{i:0;s:7:"content";i:1;s:7:"summary";i:2;s:4:"info";i:3;s:5:"title";i:4;s:7:"tagline";i:5;s:9:"copyright";}s:16:"_KNOWN_ENCODINGS";a:3:{i:0;s:5:"UTF-8";i:1;s:8:"US-ASCII";i:2;s:10:"ISO-8859-1";}s:5:"stack";a:0:{}s:9:"inchannel";b:0;s:6:"initem";b:0;s:9:"incontent";b:0;s:11:"intextinput";b:0;s:7:"inimage";b:0;s:17:"current_namespace";b:0;s:13:"last_modified";s:31:"Mon, 22 Jun 2015 11:14:10 GMT
+";s:4:"etag";s:36:""db683ae4bcfd2b24c21c3503e07e132d"
+";}

@@ -1,0 +1,242 @@
+<?
+
+//error_reporting(E_ALL);
+//ini_set("display_errors", 1);
+define('MAGPIE_OUTPUT_ENCODING', 'UTF-8');
+include 'rss_fetch.inc';
+
+$g4_path='../';
+include_once($g4_path.'common.php');
+//mysql_connect('localhost','jungchinet2','a!De!997wF') or die('asdfasdf');
+//mysql_select_db('jungchinet2');
+
+$bid=$_REQUEST['bid'];
+$adm=$_REQUEST['adm'];
+
+if(!$bid){
+	$bid=$_REQUEST['bo_table'];
+}
+
+if(!$bid) exit;
+
+if($is_admin){  //관리자일 경우 처리사항
+	
+	if($adm=='ok'){
+		$doRss='ok';
+	}
+
+}else{  //관리자가 아닐 경우 게시판 설정의 읽어오는 주기와 가장 최근 읽어온 시간을 비교해서 그 값이 더 클 경우 읽어오게...
+
+	$sql="select bo_10 from g4_board where bo_table='$bid'";
+	$rst=sql_fetch($sql);
+
+	if(!$rst['bo_10']){
+		
+		$doRss='ok';
+	
+	}else{
+
+		$sql="select rss_addr from rss_info where bo_table='$bid' and idx=998";
+		$rst2=sql_fetch($sql);
+
+		$tmpTime=strtotime(date('Y-m-d H:i:s'));
+		$timeGap=$rst2['rss_addr']*60;
+		$sTime=strtotime($rst['bo_10']);
+
+		if(($tmpTime-$sTime)>=$timeGap){
+			//echo "시간 지났어 읽어!".($tmpTime-$sTime);
+			$doRss='ok';
+		}else{
+			//echo "암것두 아녀~".($tmpTime-$sTime);
+			$doRss='';
+		}
+
+	}
+
+
+}
+
+if($doRss=='ok'){
+
+	$writer_id='slashjin';
+	$writer_passwd='1809';
+	$writer_name='정치넷';
+
+	//해당 게시판에 등록된 RSS주소와 관심단어등을 긁어옴...
+	$sql="select * from rss_info where bo_table='$bid' and idx<900 order by idx desc";
+	$rst=mysql_query($sql);
+	$tmper=0;
+
+	while($r=mysql_fetch_array($rst)){
+
+		$rss_addr=$r['rss_addr'];
+		$cate=$r['rss_opt1'];
+		$trg=$r['rss_opt2'];
+		$kwd=$r['rss_opt3'];
+		$rss_num=$r['rss_num'];
+		$imsi=0;
+		$tmper2=0;
+		$i=0;
+
+		if($kwd){
+			$kwder='ha';
+			$kwd=@explode(",",$kwd);
+			$kwdCnt=count($kwd);
+		}else{
+			$kwder='ho';
+		}
+
+		$url = $rss_addr;
+		$rss = fetch_rss($url);
+
+		$bo_table=$bid;
+		$write_table='g4_write_'.$bo_table;
+
+		//echo "Site: ", $rss->channel['title'], "<br>";
+		foreach ($rss->items as $item ) {
+
+			if($tmper2==$rss_num){
+				break;
+			}else if($i>=$rss_num){
+				if($imsi==$rss_num){
+					break;
+				}
+			}
+
+			$title = $item['title'];
+			$url   = $item['link'];
+			$desc  = $item['description'];
+			$compare=$title.$desc;
+			//$date=substr($item['pubdate'],0,10).' '.substr($item['pubdate'],11,8);
+
+			if($kwder=='ha'){
+
+				$is_kwd=0;
+				for($v=0;$v<$kwdCnt;$v++){
+
+					$rkwd=trim($kwd[$v]); //분리된 키워드~ 각각 대입을 위함..
+					"<span style='font-size:20pt;'>".$rkwd."</span>";
+					preg_match("/$rkwd/",$compare, $ohmy1);
+					
+					/*if(preg_match("/$rkwd/",$title, $ohmy1) or preg_match("/$rkwd/",$desc, $ohmy2)){
+						$is_kwd++;
+					}*/
+					if($ohmy1[0]){
+						$is_kwd++;
+					}
+
+				}
+			}
+
+		
+			if(($is_kwd==$kwdCnt or $kwder=='ho')){
+
+				//echo "<a href=$url>[$cate] ($trg) $title</a><br>$desc</li><br>";
+
+				
+					// 게시판 DB에 추가
+					$wr_num = get_next_num($write_table);
+
+					$item['title'] = get_text(cut_str($item['title'], 255), 0);
+					$stg = array( "&#038;", "&#039;", "quot;", "&lt;", "&gt;", "#39;" );
+					$otg = array( "", "\'", "\"", "<", ">", "" );
+
+					for($k=0; $k<count($stg); $k++){
+						$item[title] = str_replace($stg, $otg, $item['title']);
+					}
+
+					//$article[$i][cp_title] = addslashes(strip_tags($article[$i][cp_title]));
+					$title=$item['title'] = addslashes($item['title']);
+					$desc=$item['description'] = addslashes($item['description']);
+
+					// 이미 등록된 데이터는 건너뜀
+					$sql = " select count(*) as cnt from $write_table where wr_subject = '{$title}'";
+					$row = sql_fetch($sql);
+					if ($row['cnt']>0){ $tmper2++; continue; }
+					$writer_passwd = sql_password($writer_passwd);
+
+					$sql = " insert into $write_table
+								set wr_num = '$wr_num',
+									wr_reply = '',
+									wr_comment = 0,
+									ca_name = '{$cate}',
+									wr_option = 'html1',
+									wr_subject = '{$title}',
+									wr_content = '{$desc}',
+									wr_link1 = '{$url}',
+									wr_link2 = '',
+									wr_link1_hit = 0,
+									wr_link2_hit = 0,
+									wr_hit = 0,
+									wr_good = 0,
+									wr_nogood = 0,
+									mb_id = '$writer_id',
+									wr_password = '$writer_passwd',
+									wr_name = '$writer_name',
+									wr_email = '',
+									wr_homepage = '',
+									wr_datetime = now(),
+									wr_ip = '',
+									wr_1 = '{$trg}',
+									wr_2 = '',
+									wr_3 = '',
+									wr_4 = '',
+									wr_5 = '',
+									wr_6 = '',
+									wr_7 = '',
+									wr_8 = '',
+									wr_9 = '',
+									wr_10 = '1' ";
+					$rr=sql_query($sql);
+					$flg++;
+
+
+					$wr_id = mysql_insert_id();
+
+					// 부모 아이디에 UPDATE
+					$rr2=sql_query(" update $write_table set wr_parent = '$wr_id' where wr_id = '$wr_id' ");
+
+					// 새글 INSERT
+					//sql_query(" insert into g4_board_new ( bo_table, wr_id, wr_parent, bn_datetime ) values ( '$bo_table', '$wr_id', '$wr_id', now()' ) ");
+
+					// 게시글 1 증가
+					$rr3=sql_query("update g4_board set bo_count_write = bo_count_write + 1 where bo_table = '$bo_table'");
+
+					// 게시물 긁어온 시간 등록 (이 시간을 기준으로 다시 퍼오고 안퍼오고를 결정)
+					$mersql="update g4_board set bo_10=now() where bo_table='$bid'";
+					mysql_query($mersql);
+					
+					if($rr and $rr2 and $rr3){
+						$tmper++;
+						$tmper2++;
+						$imsi++;
+					}
+
+					$i++;
+
+			}
+
+		}
+	
+
+	}
+
+	if($tmper>0){
+
+		if($adm=='ok'){
+			
+			echo $tmper;
+
+		}else{
+			
+			//echo "<script>location.href='{$_SERVER['REQUEST_URI']}{$qry}';</script>";
+			echo "<script>parent.location.reload();</script>";
+			exit;
+
+		}
+
+	}
+
+}
+
+?>
