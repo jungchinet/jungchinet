@@ -2,7 +2,7 @@
 /*******************************************************************************
 ** 공통 변수, 상수, 코드
 *******************************************************************************/
-error_reporting(E_ALL ^ E_NOTICE);
+error_reporting(E_ALL & ~(E_STRICT|E_NOTICE|E_DEPRECATED));
 
 // 보안설정이나 프레임이 달라도 쿠키가 통하도록 설정
 header('P3P: CP="ALL CURa ADMa DEVa TAIa OUR BUS IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC OTC"');
