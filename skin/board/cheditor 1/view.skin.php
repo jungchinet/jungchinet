@@ -424,9 +424,6 @@ echo get_banner('banner4', 'basic', '', 1, 0);
 </div>
 
 </td></tr>
-<tr><td>
-<? include_once("$g4[path]/prem_top.php"); ?>
-</td></tr>
 </table><br>
 
 <script type="text/javascript"  src="<?="$g4[path]/js/board.js"?>"></script>
