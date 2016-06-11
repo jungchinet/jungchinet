@@ -322,20 +322,22 @@ $n_arr=array();
 ?>
 <? for ($i=0; $i<count($list); $i++) {
 
- //이 글이 프리미엄인가아아...
- $ip_sql="select count(prem_wr_id) from prem_info where del_date='0000-00-00 00:00:00' and prem_board='$bo_table' and prem_wr_id='{$list[$i][wr_id]}' and now() between prem_date and exp_date";
- $rst=mysql_query($ip_sql);
- $ip_data=mysql_fetch_row($rst);
+//이 글이 프리미엄인가아아...
+$ip_sql="select count(prem_wr_id) from prem_info where del_date='0000-00-00 00:00:00' and prem_board='$bo_table' and prem_wr_id='{$list[$i][wr_id]}' and now() between prem_date and exp_date";
+$rst=mysql_query($ip_sql);
+$ip_data=mysql_fetch_row($rst);
 
-			//현재 글의 wr_id 저장
-			if(in_array($list[$i][wr_id], $n_chk)){
-				if(in_array($list[$i][wr_id], $n_arr)){
-					continue;	//저장된 글번호와 현재 글번호가 같으면!! 이미 출력 된놈이니껜.. continue~
-				}else{
-					$n_arr[]=$list[$i][wr_id];	//중복되지 않으면 다시 글번호 저장하고 패스~
-				}
-			}
-			
+//현재 글의 wr_id 저장
+if (!empty($n_chk)) {
+	if(in_array($list[$i][wr_id], $n_chk)){
+		if(in_array($list[$i][wr_id], $n_arr)){
+			continue;	//저장된 글번호와 현재 글번호가 같으면!! 이미 출력 된놈이니껜.. continue~
+		}else{
+			$n_arr[]=$list[$i][wr_id];	//중복되지 않으면 다시 글번호 저장하고 패스~
+		}
+	}
+}
+
 if(!$list[$i][wr_singo] or ($list[$i][wr_singo]<$board[bo_singo_action])){
 ?>
 <tr height=28 align=center class='list_tr'> 
@@ -516,17 +518,6 @@ if(!$list[$i][wr_singo] or ($list[$i][wr_singo]<$board[bo_singo_action])){
 </tr>
 </table>
 </form>
-<tr><td>
-<!--
-<? //include_once("$g4[path]/adsense_page_bottom2.php");
-if(!$wr_id){
-	include_once("$g4[path]/prem_top.php");
-}else{
-	include_once("$g4[path]/prem_bottom.php");
-}
-?>
--->
-</td></tr>
 <tr><td height=10>
 </td></tr>
 </td></tr></table>

@@ -2,12 +2,12 @@
 // 이 파일은 새로운 파일 생성시 반드시 포함되어야 함
 if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가 
 
-include_once("$g4[path]/lib/popular.lib.php");      // 인기글
-include_once("$g4[path]/lib/banner.lib.php");      // 배너
-include_once("$g4[path]/lib/latest.lib.php");       // 최신글
-include_once("$g4[path]/lib/latest.group.lib.php"); // 그룹 최신글
-include_once("$g4[path]/lib/latest.my.lib.php"); // 그룹 최신글
-include_once("$g4[path]/lib/latest.club.lib.php");  // 클럽 최신글
+include_once($g4['path'] . "/lib/popular.lib.php");      // 인기글
+include_once($g4['path'] . "/lib/banner.lib.php");      // 배너
+include_once($g4['path'] . "/lib/latest.lib.php");       // 최신글
+include_once($g4['path'] . "/lib/latest.group.lib.php"); // 그룹 최신글
+include_once($g4['path'] . "/lib/latest.my.lib.php"); // 그룹 최신글
+// include_once($g4['path'] . "/lib/latest.club.lib.php");  // 클럽 최신글
 
 if($is_member){
 	if($member[mb_6]){
